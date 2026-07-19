@@ -43,45 +43,40 @@ function Portfolio() {
       {/* NAV */}
       <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-background/70 border-b border-border/40">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="font-display text-xl tracking-wide">
-            <span className="gold-text">Studio</span>Folio
+          <a href="#top" className="font-display text-xl tracking-wide gold-text">
+            HIMA THANKI
           </a>
           <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <li><a href="#work" className="hover:text-primary transition-colors">Work</a></li>
+            <li><a href="#tools" className="hover:text-primary transition-colors">Tools</a></li>
+            <li><a href="#work" className="hover:text-primary transition-colors">Websites</a></li>
             <li><a href="#graphics" className="hover:text-primary transition-colors">Graphics</a></li>
             <li><a href="#amazon" className="hover:text-primary transition-colors">Amazon</a></li>
             <li><a href="#certificate" className="hover:text-primary transition-colors">Certificate</a></li>
-            <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
           </ul>
-          <a href="#contact" className="hidden md:inline-flex items-center rounded-full border border-primary/60 px-4 py-2 text-xs uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
-            Hire Me
-          </a>
         </nav>
       </header>
 
-      {/* HERO */}
+      {/* HERO — abstract color, minimal copy */}
       <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
-        <img src={heroBg} alt="" width={1600} height={1200} className="absolute inset-0 h-full w-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-        <div className="relative mx-auto max-w-6xl px-6 pt-32 pb-20">
-          <p className="text-xs uppercase tracking-[0.4em] text-primary mb-6">Portfolio · 2026</p>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.02] max-w-4xl">
-            Crafting <span className="italic gold-text">websites</span>, graphics &<br />
-            Amazon <span className="italic gold-text">experiences</span>.
+        <div className="absolute inset-0 bg-background" />
+        <div className="absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-primary/25 blur-[140px]" />
+        <div className="absolute -bottom-40 -right-40 h-[600px] w-[600px] rounded-full bg-accent/20 blur-[160px]" />
+        <div className="absolute top-1/3 left-1/2 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-gold/10 blur-[120px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
+
+        <div className="relative mx-auto max-w-6xl px-6 text-center">
+          <p className="text-xs uppercase tracking-[0.5em] text-primary mb-8">Portfolio</p>
+          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl leading-none">
+            <span className="gold-text">HIMA</span>
+            <br />
+            THANKI
           </h1>
-          <p className="mt-8 max-w-xl text-lg text-muted-foreground">
-            A curated collection of the tools I command, the sites I've launched, the visuals I've designed, and the Amazon skills I bring to every brand.
+          <p className="mt-8 text-sm uppercase tracking-[0.35em] text-muted-foreground">
+            Web · Graphic · Amazon Central
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a href="#work" className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-accent transition-colors">
-              View my work
-            </a>
-            <a href="#contact" className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-medium hover:border-primary transition-colors">
-              Get in touch
-            </a>
-          </div>
         </div>
       </section>
+
 
       {/* TOOLS */}
       <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
