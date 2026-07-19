@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroBg from "@/assets/hero-bg.jpg";
 import certificate from "@/assets/certificate.jpg";
 import web1 from "@/assets/project-web1.jpg";
 import web2 from "@/assets/project-web2.jpg";
@@ -7,9 +6,6 @@ import graphic1 from "@/assets/graphic1.jpg";
 import graphic2 from "@/assets/graphic2.jpg";
 import graphic3 from "@/assets/graphic3.jpg";
 
-export const Route = createFileRoute("/")({
-  component: Portfolio,
-});
 
 const webTools = [
   "WordPress", "Wix", "Shopify", "Webflow", "Elementor",
