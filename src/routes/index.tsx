@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import heroBg from "@/assets/hero-bg.jpg";
 import certificate from "@/assets/certificate.jpg";
 import web1 from "@/assets/project-web1.jpg";
 import web2 from "@/assets/project-web2.jpg";
@@ -6,6 +7,9 @@ import graphic1 from "@/assets/graphic1.jpg";
 import graphic2 from "@/assets/graphic2.jpg";
 import graphic3 from "@/assets/graphic3.jpg";
 
+export const Route = createFileRoute("/")({
+  component: Portfolio,
+});
 
 const webTools = [
   "WordPress", "Wix", "Shopify", "Webflow", "Elementor",
@@ -43,47 +47,53 @@ function Portfolio() {
       {/* NAV */}
       <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-background/70 border-b border-border/40">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="font-display text-xl tracking-wide gold-text">
-            HIMA THANKI
+          <a href="#top" className="font-display text-xl tracking-wide">
+            <span className="gold-text">Studio</span>Folio
           </a>
           <ul className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <li><a href="#tools" className="hover:text-primary transition-colors">Tools</a></li>
-            <li><a href="#work" className="hover:text-primary transition-colors">Websites</a></li>
+            <li><a href="#work" className="hover:text-primary transition-colors">Work</a></li>
             <li><a href="#graphics" className="hover:text-primary transition-colors">Graphics</a></li>
             <li><a href="#amazon" className="hover:text-primary transition-colors">Amazon</a></li>
             <li><a href="#certificate" className="hover:text-primary transition-colors">Certificate</a></li>
+            <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
           </ul>
+          <a href="#contact" className="hidden md:inline-flex items-center rounded-full border border-primary/60 px-4 py-2 text-xs uppercase tracking-widest text-primary hover:bg-primary hover:text-primary-foreground transition-colors">
+            Hire Me
+          </a>
         </nav>
       </header>
 
-      {/* HERO — abstract color, minimal copy */}
+      {/* HERO */}
       <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
-        <div className="absolute inset-0 bg-background" />
-        <div className="absolute -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-primary/25 blur-[140px]" />
-        <div className="absolute -bottom-40 -right-40 h-[600px] w-[600px] rounded-full bg-accent/20 blur-[160px]" />
-        <div className="absolute top-1/3 left-1/2 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-gold/10 blur-[120px]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
-
-        <div className="relative mx-auto max-w-6xl px-6 text-center">
-          <p className="text-xs uppercase tracking-[0.5em] text-primary mb-8">Portfolio</p>
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl leading-none">
-            <span className="gold-text">HIMA</span>
-            <br />
-            THANKI
+        <img src={heroBg} alt="" width={1600} height={1200} className="absolute inset-0 h-full w-full object-cover opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+        <div className="relative mx-auto max-w-6xl px-6 pt-32 pb-20">
+          <p className="text-xs uppercase tracking-[0.4em] text-primary mb-6">Portfolio · 2026</p>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[1.02] max-w-4xl">
+            Crafting <span className="italic gold-text">websites</span>, graphics &<br />
+            Amazon <span className="italic gold-text">experiences</span>.
           </h1>
-          <p className="mt-8 text-sm uppercase tracking-[0.35em] text-muted-foreground">
-            Web · Graphic · Amazon Central
+          <p className="mt-8 max-w-xl text-lg text-muted-foreground">
+            A curated collection of the tools I command, the sites I've launched, the visuals I've designed, and the Amazon skills I bring to every brand.
           </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a href="#work" className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-accent transition-colors">
+              View my work
+            </a>
+            <a href="#contact" className="inline-flex items-center rounded-full border border-border px-6 py-3 text-sm font-medium hover:border-primary transition-colors">
+              Get in touch
+            </a>
+          </div>
         </div>
       </section>
 
-
       {/* TOOLS */}
-      <section id="tools" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+      <section className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="grid gap-16 md:grid-cols-2">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">01 — Website Tools</p>
-            <h2 className="font-display text-4xl md:text-5xl mb-8">Platforms & code.</h2>
+            <h2 className="font-display text-4xl md:text-5xl mb-6">Platforms & code I build with.</h2>
+            <p className="text-muted-foreground mb-8">From no-code builders to hand-coded React, I choose the right tool for the goal.</p>
             <ul className="flex flex-wrap gap-2">
               {webTools.map((t) => (
                 <li key={t} className="rounded-full border border-border bg-card px-4 py-2 text-sm hover:border-primary/60 transition-colors">
@@ -94,7 +104,8 @@ function Portfolio() {
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">02 — Graphic Tools</p>
-            <h2 className="font-display text-4xl md:text-5xl mb-8">Design software.</h2>
+            <h2 className="font-display text-4xl md:text-5xl mb-6">Design software I've mastered.</h2>
+            <p className="text-muted-foreground mb-8">Pixel-perfect, print-ready, and everything between.</p>
             <ul className="flex flex-wrap gap-2">
               {graphicTools.map((t) => (
                 <li key={t} className="rounded-full border border-border bg-card px-4 py-2 text-sm hover:border-primary/60 transition-colors">
@@ -110,9 +121,12 @@ function Portfolio() {
 
       {/* WEBSITES */}
       <section id="work" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-        <div className="mb-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Websites</p>
-          <h2 className="font-display text-4xl md:text-5xl">Sites created.</h2>
+        <div className="flex items-end justify-between mb-12">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Websites</p>
+            <h2 className="font-display text-4xl md:text-5xl">Selected projects.</h2>
+          </div>
+          <p className="hidden md:block text-sm text-muted-foreground max-w-xs">A few sites I've shipped end-to-end.</p>
         </div>
         <div className="grid gap-8 md:grid-cols-2">
           {websites.map((w) => (
@@ -154,9 +168,10 @@ function Portfolio() {
       <section id="amazon" className="relative overflow-hidden py-24 md:py-32">
         <div className="absolute inset-0 bg-gradient-to-b from-card/40 to-transparent" />
         <div className="relative mx-auto max-w-6xl px-6">
-          <div className="mb-14">
+          <div className="mb-14 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Amazon Central</p>
-            <h2 className="font-display text-4xl md:text-5xl">Seller Central skills.</h2>
+            <h2 className="font-display text-4xl md:text-5xl mb-4">Seller Central skills.</h2>
+            <p className="text-muted-foreground">Hands-on with the Amazon Seller Central ecosystem — from listing to launch to scale.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {amazonSkills.map((s, i) => (
@@ -178,8 +193,11 @@ function Portfolio() {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Recognition</p>
             <h2 className="font-display text-4xl md:text-5xl mb-6">Appreciation certificate.</h2>
-            <p className="text-muted-foreground">
-              Awarded for consistent quality, dedication, and client-focused delivery.
+            <p className="text-muted-foreground mb-4">
+              A token of recognition awarded for consistent quality, dedication, and client-focused delivery.
+            </p>
+            <p className="text-sm text-muted-foreground/80 italic">
+              Replace this image with your own certificate — <span className="text-primary">src/assets/certificate.jpg</span>.
             </p>
           </div>
           <div className="overflow-hidden rounded-2xl border border-primary/30 shadow-2xl shadow-primary/10">
@@ -188,8 +206,22 @@ function Portfolio() {
         </div>
       </section>
 
-      <footer className="border-t border-border/40 py-8 text-center text-xs tracking-[0.3em] uppercase text-muted-foreground">
-        © 2026 · Hima Thanki
+      {/* CONTACT */}
+      <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-32 text-center">
+        <p className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Let's talk</p>
+        <h2 className="font-display text-5xl md:text-7xl mb-6">
+          Have a project <span className="italic gold-text">in mind?</span>
+        </h2>
+        <p className="mx-auto max-w-xl text-muted-foreground mb-10">
+          Whether it's a new website, a brand refresh, or scaling your Amazon store — I'd love to hear about it.
+        </p>
+        <a href="mailto:hello@example.com" className="inline-flex items-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground hover:bg-accent transition-colors">
+          hello@example.com
+        </a>
+      </section>
+
+      <footer className="border-t border-border/40 py-8 text-center text-xs text-muted-foreground">
+        © 2026 StudioFolio · Crafted with care
       </footer>
     </div>
   );
