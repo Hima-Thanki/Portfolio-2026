@@ -24,33 +24,36 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-gold: var(--gold);
-  --color-gold-soft: var(--gold-soft);
-  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --color-blue: var(--brand-blue);
+  --color-green: var(--brand-green);
+  --color-gold: var(--brand-gold);
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 :root {
-  --radius: 0.5rem;
-  --background: oklch(0.14 0.005 60);
-  --foreground: oklch(0.96 0.01 80);
-  --card: oklch(0.18 0.008 70);
-  --card-foreground: oklch(0.96 0.01 80);
-  --popover: oklch(0.18 0.008 70);
-  --popover-foreground: oklch(0.96 0.01 80);
-  --primary: oklch(0.78 0.13 82);
-  --primary-foreground: oklch(0.14 0.005 60);
-  --secondary: oklch(0.22 0.01 70);
-  --secondary-foreground: oklch(0.96 0.01 80);
-  --muted: oklch(0.22 0.01 70);
-  --muted-foreground: oklch(0.72 0.02 80);
-  --accent: oklch(0.88 0.11 88);
-  --accent-foreground: oklch(0.14 0.005 60);
-  --border: oklch(0.28 0.01 70);
-  --input: oklch(0.28 0.01 70);
-  --ring: oklch(0.78 0.13 82);
-  --gold: oklch(0.78 0.13 82);
-  --gold-soft: oklch(0.88 0.11 88);
+  --radius: 0.75rem;
+  --background: oklch(0.16 0.02 250);
+  --foreground: oklch(0.97 0.01 240);
+  --card: oklch(0.20 0.025 250);
+  --card-foreground: oklch(0.97 0.01 240);
+  --popover: oklch(0.20 0.025 250);
+  --popover-foreground: oklch(0.97 0.01 240);
+  --primary: oklch(0.72 0.16 235);
+  --primary-foreground: oklch(0.14 0.02 250);
+  --secondary: oklch(0.24 0.02 250);
+  --secondary-foreground: oklch(0.97 0.01 240);
+  --muted: oklch(0.24 0.02 250);
+  --muted-foreground: oklch(0.72 0.02 240);
+  --accent: oklch(0.78 0.16 165);
+  --accent-foreground: oklch(0.14 0.02 250);
+  --border: oklch(0.30 0.02 250);
+  --input: oklch(0.30 0.02 250);
+  --ring: oklch(0.72 0.16 235);
+  --brand-blue: oklch(0.72 0.16 235);
+  --brand-green: oklch(0.78 0.16 165);
+  --brand-gold: oklch(0.82 0.13 85);
 }
 
 @layer base {
@@ -61,17 +64,79 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; font-weight: 600; }
+  code, pre, .mono { font-family: var(--font-mono); }
 }
 
-@utility gold-text {
-  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+@utility grad-text {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-green));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+@utility gold-text {
+  color: var(--brand-gold);
+}
+
 @utility hairline {
-  background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+  background: linear-gradient(90deg, transparent, var(--brand-blue) 50%, transparent);
   height: 1px;
+  opacity: 0.5;
+}
+
+@utility glow-blue {
+  box-shadow: 0 0 40px -8px color-mix(in oklab, var(--brand-blue) 60%, transparent);
+}
+
+@utility glow-green {
+  box-shadow: 0 0 40px -8px color-mix(in oklab, var(--brand-green) 60%, transparent);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-18px) translateX(6px); }
+}
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(14px) translateX(-8px); }
+}
+@keyframes drift {
+  0%, 100% { transform: translate(0,0) rotate(0deg); }
+  50% { transform: translate(10px,-14px) rotate(3deg); }
+}
+@keyframes caret {
+  0%, 60% { opacity: 1; }
+  61%, 100% { opacity: 0; }
+}
+@keyframes type {
+  0% { width: 0; }
+  60%, 100% { width: 100%; }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 0.4; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+@keyframes bar-grow {
+  0% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+  100% { transform: scaleY(0.6); }
+}
+@keyframes grid-shift {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+@utility anim-float { animation: float-slow 8s ease-in-out infinite; }
+@utility anim-float-alt { animation: float-slower 10s ease-in-out infinite; }
+@utility anim-drift { animation: drift 12s ease-in-out infinite; }
+@utility anim-caret { animation: caret 1s steps(1) infinite; }
+@utility anim-pulse-dot { animation: pulse-dot 2.4s ease-in-out infinite; }
+@utility anim-bar { animation: bar-grow 1.8s ease-in-out infinite; transform-origin: bottom; }
+@utility grid-bg {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--brand-blue) 18%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--brand-blue) 18%, transparent) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: grid-shift 20s linear infinite;
 }
