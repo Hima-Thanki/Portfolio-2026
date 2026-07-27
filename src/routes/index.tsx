@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import certificate from "@/assets/certificate.jpg";
-import web1 from "@/assets/project-web1.jpg";
-import web2 from "@/assets/project-web2.jpg";
+import web1 from "@/assets/web1.png.asset.json";
+import web3 from "@/assets/web3.png.asset.json";
+import web5 from "@/assets/web5.png.asset.json";
+import web9 from "@/assets/web9.png.asset.json";
 import de1 from "@/assets/de1.png.asset.json";
 import de2 from "@/assets/de2.png.asset.json";
 import de3 from "@/assets/de3.png.asset.json";
