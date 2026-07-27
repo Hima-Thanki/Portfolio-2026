@@ -185,15 +185,27 @@ function Portfolio() {
           </div>
           <p className="text-sm text-muted-foreground max-w-xs">Sites I've built end-to-end — from wireframes to production deployment.</p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-10">
           {websites.map((w) => (
-            <article key={w.title} className="group overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/60 transition-colors">
-              <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                <img src={w.img} alt={w.title} loading="lazy" width={1200} height={800} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <article key={w.title} className="group rounded-2xl border border-border bg-card p-6 hover:border-primary/60 transition-colors">
+              <div className="flex items-end justify-between flex-wrap gap-2 mb-5">
+                <div>
+                  <p className="mono text-xs uppercase tracking-widest text-primary">{w.tag}</p>
+                  <h3 className="mt-1 font-display text-2xl md:text-3xl">{w.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground max-w-md">{w.desc}</p>
               </div>
-              <div className="p-6">
-                <p className="mono text-xs uppercase tracking-widest text-primary">{w.tag}</p>
-                <h3 className="mt-2 font-display text-2xl">{w.title}</h3>
+              <div className={`grid gap-4 ${w.pages.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
+                {w.pages.map((p) => (
+                  <figure key={p.label} className="overflow-hidden rounded-xl border border-border bg-secondary">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img src={p.img} alt={`${w.title} — ${p.label}`} loading="lazy" width={1200} height={900} className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />
+                    </div>
+                    <figcaption className="px-4 py-2 mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-border">
+                      {p.label}
+                    </figcaption>
+                  </figure>
+                ))}
               </div>
             </article>
           ))}
