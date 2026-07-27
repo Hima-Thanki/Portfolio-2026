@@ -43,9 +43,13 @@ const websites = [
 ];
 
 const graphics = [
-  { title: "Brand Identity", tag: "Logo · Illustrator", img: graphic1 },
-  { title: "Social Media Kit", tag: "Instagram · Photoshop", img: graphic2 },
-  { title: "Print Collateral", tag: "Business Cards · InDesign", img: graphic3 },
+  { title: "Gita Jayanti Greeting", tag: "Festival · Photoshop", img: de1.url },
+  { title: "Diwali Wishes Poster", tag: "Festival · Illustrator", img: de2.url },
+  { title: "New Year 2024", tag: "Celebration · Photoshop", img: de3.url },
+  { title: "Sharad Purnima", tag: "Festival · Canva", img: de4.url },
+  { title: "Dhanteras Card", tag: "Festival · Illustrator", img: de5.url },
+  { title: "Naraka Chaturdashi", tag: "Festival · Photoshop", img: de6.url },
+  { title: "Merry Christmas", tag: "Festival · Photoshop", img: de7.url },
 ];
 
 function Portfolio() {
