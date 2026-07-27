@@ -2,9 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import certificate from "@/assets/certificate.jpg";
 import web1 from "@/assets/project-web1.jpg";
 import web2 from "@/assets/project-web2.jpg";
-import graphic1 from "@/assets/graphic1.jpg";
-import graphic2 from "@/assets/graphic2.jpg";
-import graphic3 from "@/assets/graphic3.jpg";
+import de1 from "@/assets/de1.png.asset.json";
+import de2 from "@/assets/de2.png.asset.json";
+import de3 from "@/assets/de3.png.asset.json";
+import de4 from "@/assets/de4.png.asset.json";
+import de5 from "@/assets/de5.png.asset.json";
+import de6 from "@/assets/de6.png.asset.json";
+import de7 from "@/assets/de7.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -39,9 +43,13 @@ const websites = [
 ];
 
 const graphics = [
-  { title: "Brand Identity", tag: "Logo · Illustrator", img: graphic1 },
-  { title: "Social Media Kit", tag: "Instagram · Photoshop", img: graphic2 },
-  { title: "Print Collateral", tag: "Business Cards · InDesign", img: graphic3 },
+  { title: "Gita Jayanti Greeting", tag: "Festival · Photoshop", img: de1.url },
+  { title: "Diwali Wishes Poster", tag: "Festival · Illustrator", img: de2.url },
+  { title: "New Year 2024", tag: "Celebration · Photoshop", img: de3.url },
+  { title: "Sharad Purnima", tag: "Festival · Canva", img: de4.url },
+  { title: "Dhanteras Card", tag: "Festival · Illustrator", img: de5.url },
+  { title: "Naraka Chaturdashi", tag: "Festival · Photoshop", img: de6.url },
+  { title: "Merry Christmas", tag: "Festival · Photoshop", img: de7.url },
 ];
 
 function Portfolio() {
