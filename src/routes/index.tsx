@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import certificate from "@/assets/certificate.jpg";
-import web1 from "@/assets/project-web1.jpg";
-import web2 from "@/assets/project-web2.jpg";
+import web1 from "@/assets/web1.png.asset.json";
+import web3 from "@/assets/web3.png.asset.json";
+import web5 from "@/assets/web5.png.asset.json";
+import web9 from "@/assets/web9.png.asset.json";
 import de1 from "@/assets/de1.png.asset.json";
 import de2 from "@/assets/de2.png.asset.json";
 import de3 from "@/assets/de3.png.asset.json";
@@ -38,8 +40,10 @@ const amazonSkills = [
 ];
 
 const websites = [
-  { title: "Modern Portfolio Site", tag: "WordPress · Elementor", img: web1 },
-  { title: "E-commerce Boutique", tag: "Shopify · Custom Theme", img: web2 },
+  { title: "TazZA — Organic Food Store", tag: "WordPress · Elementor", img: web1.url },
+  { title: "IconStock — Icon Marketplace", tag: "React · Tailwind CSS", img: web3.url },
+  { title: "Special Offers — Grocery Deals", tag: "HTML · CSS · JavaScript", img: web5.url },
+  { title: "SignGards — Safety Signage", tag: "Shopify · Custom Theme", img: web9.url },
 ];
 
 const graphics = [
