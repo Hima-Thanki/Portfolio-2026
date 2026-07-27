@@ -1,9 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import certificate from "@/assets/certificate.jpg";
 import web1 from "@/assets/web1.png.asset.json";
+import web2 from "@/assets/web2.png.asset.json";
 import web3 from "@/assets/web3.png.asset.json";
+import web4 from "@/assets/web4.png.asset.json";
 import web5 from "@/assets/web5.png.asset.json";
+import web6 from "@/assets/web6.png.asset.json";
+import web7 from "@/assets/web7.png.asset.json";
+import web8 from "@/assets/web8.png.asset.json";
 import web9 from "@/assets/web9.png.asset.json";
+import web10 from "@/assets/web10.png.asset.json";
 import de1 from "@/assets/de1.png.asset.json";
 import de2 from "@/assets/de2.png.asset.json";
 import de3 from "@/assets/de3.png.asset.json";
@@ -40,10 +46,44 @@ const amazonSkills = [
 ];
 
 const websites = [
-  { title: "TazZA — Organic Food Store", tag: "WordPress · Elementor", img: web1.url },
-  { title: "IconStock — Icon Marketplace", tag: "React · Tailwind CSS", img: web3.url },
-  { title: "Special Offers — Grocery Deals", tag: "HTML · CSS · JavaScript", img: web5.url },
-  { title: "SignGards — Safety Signage", tag: "Shopify · Custom Theme", img: web9.url },
+  {
+    title: "TazZA — Organic Food Store",
+    tag: "WordPress · Elementor",
+    desc: "Multi-page organic grocery site with hero, services, and testimonials.",
+    pages: [
+      { label: "Home", img: web1.url },
+      { label: "Gallery & Footer", img: web2.url },
+    ],
+  },
+  {
+    title: "IconStock — Icon Marketplace",
+    tag: "React · Tailwind CSS",
+    desc: "Icon library platform with search, categories, and developer features.",
+    pages: [
+      { label: "Home", img: web3.url },
+      { label: "What We Do", img: web4.url },
+    ],
+  },
+  {
+    title: "Special Offers — Grocery Deals",
+    tag: "HTML · CSS · JavaScript",
+    desc: "Promo landing with category tiles and gradient deal cards.",
+    pages: [
+      { label: "Landing", img: web5.url },
+      { label: "Categories", img: web6.url },
+      { label: "Deals", img: web7.url },
+    ],
+  },
+  {
+    title: "SignGards — Safety Signage",
+    tag: "Shopify · Custom Theme",
+    desc: "Industrial safety signage store — coming-soon, storefront and about pages.",
+    pages: [
+      { label: "Coming Soon", img: web8.url },
+      { label: "Storefront", img: web9.url },
+      { label: "About Us", img: web10.url },
+    ],
+  },
 ];
 
 const graphics = [
@@ -145,15 +185,27 @@ function Portfolio() {
           </div>
           <p className="text-sm text-muted-foreground max-w-xs">Sites I've built end-to-end — from wireframes to production deployment.</p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-10">
           {websites.map((w) => (
-            <article key={w.title} className="group overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/60 transition-colors">
-              <div className="aspect-[4/3] overflow-hidden bg-secondary">
-                <img src={w.img} alt={w.title} loading="lazy" width={1200} height={800} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <article key={w.title} className="group rounded-2xl border border-border bg-card p-6 hover:border-primary/60 transition-colors">
+              <div className="flex items-end justify-between flex-wrap gap-2 mb-5">
+                <div>
+                  <p className="mono text-xs uppercase tracking-widest text-primary">{w.tag}</p>
+                  <h3 className="mt-1 font-display text-2xl md:text-3xl">{w.title}</h3>
+                </div>
+                <p className="text-sm text-muted-foreground max-w-md">{w.desc}</p>
               </div>
-              <div className="p-6">
-                <p className="mono text-xs uppercase tracking-widest text-primary">{w.tag}</p>
-                <h3 className="mt-2 font-display text-2xl">{w.title}</h3>
+              <div className={`grid gap-4 ${w.pages.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"}`}>
+                {w.pages.map((p) => (
+                  <figure key={p.label} className="overflow-hidden rounded-xl border border-border bg-secondary">
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <img src={p.img} alt={`${w.title} — ${p.label}`} loading="lazy" width={1200} height={900} className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />
+                    </div>
+                    <figcaption className="px-4 py-2 mono text-[10px] uppercase tracking-widest text-muted-foreground border-t border-border">
+                      {p.label}
+                    </figcaption>
+                  </figure>
+                ))}
               </div>
             </article>
           ))}
