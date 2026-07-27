@@ -2,9 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import certificate from "@/assets/certificate.jpg";
 import web1 from "@/assets/project-web1.jpg";
 import web2 from "@/assets/project-web2.jpg";
-import graphic1 from "@/assets/graphic1.jpg";
-import graphic2 from "@/assets/graphic2.jpg";
-import graphic3 from "@/assets/graphic3.jpg";
+import de1 from "@/assets/de1.png.asset.json";
+import de2 from "@/assets/de2.png.asset.json";
+import de3 from "@/assets/de3.png.asset.json";
+import de4 from "@/assets/de4.png.asset.json";
+import de5 from "@/assets/de5.png.asset.json";
+import de6 from "@/assets/de6.png.asset.json";
+import de7 from "@/assets/de7.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
