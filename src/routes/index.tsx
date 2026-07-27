@@ -40,8 +40,10 @@ const amazonSkills = [
 ];
 
 const websites = [
-  { title: "Modern Portfolio Site", tag: "WordPress · Elementor", img: web1 },
-  { title: "E-commerce Boutique", tag: "Shopify · Custom Theme", img: web2 },
+  { title: "TazZA — Organic Food Store", tag: "WordPress · Elementor", img: web1.url },
+  { title: "IconStock — Icon Marketplace", tag: "React · Tailwind CSS", img: web3.url },
+  { title: "Special Offers — Grocery Deals", tag: "HTML · CSS · JavaScript", img: web5.url },
+  { title: "SignGards — Safety Signage", tag: "Shopify · Custom Theme", img: web9.url },
 ];
 
 const graphics = [
