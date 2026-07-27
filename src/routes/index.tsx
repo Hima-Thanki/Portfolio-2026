@@ -46,10 +46,44 @@ const amazonSkills = [
 ];
 
 const websites = [
-  { title: "TazZA — Organic Food Store", tag: "WordPress · Elementor", img: web1.url },
-  { title: "IconStock — Icon Marketplace", tag: "React · Tailwind CSS", img: web3.url },
-  { title: "Special Offers — Grocery Deals", tag: "HTML · CSS · JavaScript", img: web5.url },
-  { title: "SignGards — Safety Signage", tag: "Shopify · Custom Theme", img: web9.url },
+  {
+    title: "TazZA — Organic Food Store",
+    tag: "WordPress · Elementor",
+    desc: "Multi-page organic grocery site with hero, services, and testimonials.",
+    pages: [
+      { label: "Home", img: web1.url },
+      { label: "Gallery & Footer", img: web2.url },
+    ],
+  },
+  {
+    title: "IconStock — Icon Marketplace",
+    tag: "React · Tailwind CSS",
+    desc: "Icon library platform with search, categories, and developer features.",
+    pages: [
+      { label: "Home", img: web3.url },
+      { label: "What We Do", img: web4.url },
+    ],
+  },
+  {
+    title: "Special Offers — Grocery Deals",
+    tag: "HTML · CSS · JavaScript",
+    desc: "Promo landing with category tiles and gradient deal cards.",
+    pages: [
+      { label: "Landing", img: web5.url },
+      { label: "Categories", img: web6.url },
+      { label: "Deals", img: web7.url },
+    ],
+  },
+  {
+    title: "SignGards — Safety Signage",
+    tag: "Shopify · Custom Theme",
+    desc: "Industrial safety signage store — coming-soon, storefront and about pages.",
+    pages: [
+      { label: "Coming Soon", img: web8.url },
+      { label: "Storefront", img: web9.url },
+      { label: "About Us", img: web10.url },
+    ],
+  },
 ];
 
 const graphics = [
