@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Hima Thanki — Web Developer, Graphic Designer & Amazon Specialist" },
+      { title: "Hima Thanki | Web Developer, Graphic Designer & Amazon Specialist" },
       { name: "description", content: "Portfolio of Hima Thanki — Web Developer, Graphic Designer & E-commerce Specialist creating responsive websites, engaging designs, and optimized Amazon experiences." },
       { property: "og:title", content: "Hima Thanki — Portfolio" },
       { property: "og:description", content: "Web Developer, Graphic Designer & E-commerce Specialist." },
