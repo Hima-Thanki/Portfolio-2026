@@ -674,7 +674,7 @@ function ContactSection() {
             <label htmlFor="name" className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Name</label>
             <input id="name" name="name" maxLength={100}
               className="mt-2 w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-sm outline-none focus:border-primary transition-colors" />
-            {errors.name && <p className="mt-1 text-xs text-destructive-foreground/90 text-accent">{errors.name}</p>}
+            {errors.name && <p className="mt-1 text-xs text-accent">{errors.name}</p>}
           </div>
           <div>
             <label htmlFor="email" className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Email</label>
