@@ -1,11 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
-  Mail, Phone, MapPin, Linkedin, Github, Download, ArrowRight, ExternalLink,
-  Search, Megaphone, LayoutTemplate, Store, Boxes, LineChart, TrendingUp, FileText,
-  Code2, Palette, Wrench, ShoppingCart, Layers, Star, Quote, Award, Briefcase, GraduationCap,
+  Mail, MapPin, Linkedin, Github, Download, ArrowRight, ExternalLink,
+  Code2, Palette, Wrench, ShoppingCart, Layers, Briefcase, GraduationCap,
 } from "lucide-react";
-import certificate from "@/assets/certificate.jpg";
 import heroIllustration from "@/assets/hero-illustration.png";
 import aboutIllustration from "@/assets/about-illustration.png";
 import web1 from "@/assets/web1.png.asset.json";
@@ -159,27 +157,16 @@ const extraShots = [
 const designWork = [
   { title: "Company Profile", tag: "InDesign · Print", span: "row-span-2" },
   { title: "Product Catalogue", tag: "InDesign · Print" },
-  { title: "Brochure Design", tag: "Illustrator" },
+  { title: "Safety Sign Design", tag: "CorelDRAW · Vector" },
   { title: "Flyer Design", tag: "Photoshop", span: "row-span-2" },
-  { title: "Corporate Branding", tag: "Brand System" },
+  { title: "Safety Sign Printing", tag: "Print Production" },
   { title: "Business Card", tag: "Print · Identity" },
   { title: "Logo Design", tag: "Illustrator", span: "row-span-2" },
   { title: "Packaging Design", tag: "Dieline · 3D Mockup" },
-  { title: "Amazon A+ Content", tag: "E-commerce" },
+  { title: "Industrial Safety Signage", tag: "Signage · Compliance" },
   { title: "Social Media Campaign", tag: "Canva · Photoshop" },
   { title: "Safety Signage Design", tag: "CorelDRAW · Vector" },
   { title: "Banner Design", tag: "Web & Print" },
-];
-
-const amazonSkills = [
-  { icon: FileText, title: "Product Listing Optimization", desc: "SEO-driven titles, bullets and backend keywords.", metric: "60+ listings" },
-  { icon: Search, title: "Keyword Research", desc: "Helium 10 & Jungle Scout high-intent keyword mapping.", metric: "1.5k+ keywords" },
-  { icon: Megaphone, title: "PPC Campaign Management", desc: "Sponsored Products, Brands & Display with ACoS control.", metric: "ACoS ↓ 28%" },
-  { icon: LayoutTemplate, title: "A+ Content Design", desc: "Enhanced brand content modules that lift conversion.", metric: "CVR ↑ 22%" },
-  { icon: Store, title: "Brand Store Design", desc: "Multi-page storefronts with branded navigation.", metric: "5 storefronts" },
-  { icon: Boxes, title: "Inventory Management", desc: "FBA shipments, restock planning and IPI health.", metric: "IPI 500+" },
-  { icon: LineChart, title: "Competitor Analysis", desc: "Price, review and share-of-voice benchmarking.", metric: "Weekly reports" },
-  { icon: TrendingUp, title: "SEO Optimization", desc: "Organic rank tracking and listing iteration.", metric: "Rank ↑ page 1" },
 ];
 
 const skillGroups = [
@@ -188,19 +175,6 @@ const skillGroups = [
   { icon: Palette, title: "Design", color: "gold-text", items: ["Photoshop", "Illustrator", "CorelDRAW", "Figma"] },
   { icon: ShoppingCart, title: "Amazon", color: "text-accent", items: ["Seller Central", "Helium 10", "PPC", "SEO"] },
   { icon: Wrench, title: "Tools", color: "text-primary", items: ["Git", "GitHub", "VS Code", "ChatGPT", "Gemini"] },
-];
-
-const certifications = [
-  { title: "Certificate of Appreciation", issuer: "Splendour Signs LLC", note: "Recognised for consistent quality and on-time delivery.", img: certificate },
-  { title: "Amazon Seller Central Specialist", issuer: "Marketplace Training", note: "Listing, A+ content, PPC and account health management." },
-  { title: "Web Development Certification", issuer: "Professional Course", note: "HTML5, CSS3, JavaScript, React and responsive design." },
-  { title: "Graphic Design Certification", issuer: "Adobe Toolchain", note: "Photoshop, Illustrator and print production workflow." },
-];
-
-const testimonials = [
-  { name: "Operations Manager", company: "Splendour Signs LLC", rating: 5, review: "Hima handled our website, print collateral and Amazon listings with equal confidence. Sales visibility improved noticeably within a few months." },
-  { name: "Brand Owner", company: "E-commerce Client", rating: 5, review: "The A+ content and storefront redesign made our brand look far more premium. Conversion rate went up and ad spend went down." },
-  { name: "Project Lead", company: "Jinou Trading LLC", rating: 5, review: "Reliable, detail-oriented and quick to pick up new tools. UI improvements were delivered ahead of schedule." },
 ];
 
 const RESUME_URL = "/hima-thanki-resume.pdf";
@@ -263,8 +237,7 @@ function Portfolio() {
           <ul className="hidden lg:flex items-center gap-6 text-sm text-muted-foreground">
             {[
               ["About", "#about"], ["Experience", "#experience"], ["Projects", "#work"],
-              ["Design", "#graphics"], ["Amazon", "#amazon"], ["Skills", "#skills"],
-              ["Certificates", "#certificate"], ["Contact", "#contact"],
+              ["Design", "#graphics"], ["Skills", "#skills"], ["Contact", "#contact"],
             ].map(([l, h]) => (
               <li key={h}><a href={h} className="hover:text-primary transition-colors">{l}</a></li>
             ))}
@@ -503,32 +476,10 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* AMAZON */}
-      <section id="amazon" className="relative overflow-hidden py-24 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-card/40 to-transparent" />
-        <div className="relative mx-auto max-w-6xl px-6">
-          <SectionHead index="05" label="Amazon Experience" title="Marketplace expertise." tone="gold-text"
-            sub="Hands-on across the Amazon Seller Central ecosystem — from listing to launch to scale." />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {amazonSkills.map((s, i) => (
-              <Reveal key={s.title} delay={(i % 4) * 80}>
-                <div className="h-full rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 shadow-lg shadow-black/20 hover:-translate-y-1 hover:border-primary/60 hover:shadow-primary/10 transition-all duration-300">
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/10 text-primary">
-                    <s.icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="font-display text-lg mb-2">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground">{s.desc}</p>
-                  <p className="mt-4 mono text-[11px] uppercase tracking-widest gold-text">{s.metric}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* SKILLS */}
       <section id="skills" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
-        <SectionHead index="06" label="Skills" title="Tools & technologies." />
+        <SectionHead index="05" label="Skills" title="Tools & technologies." />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((g, i) => (
             <Reveal key={g.title} delay={(i % 3) * 80}>
@@ -552,55 +503,6 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* CERTIFICATIONS */}
-      <section id="certificate" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
-        <SectionHead index="07" label="Certificates" title="Certifications & achievements." />
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-start">
-          <Reveal className="overflow-hidden rounded-2xl border border-primary/30 shadow-2xl shadow-primary/10">
-            <img src={certificate} alt="Certificate of appreciation awarded to Hima Thanki" loading="lazy" width={1200} height={900} className="w-full" />
-          </Reveal>
-          <div className="grid gap-4">
-            {certifications.map((c, i) => (
-              <Reveal key={c.title} delay={i * 80}>
-                <div className="flex gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-accent/60 transition-colors">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-accent/40 bg-accent/10 text-accent">
-                    <Award className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <h3 className="font-display text-lg">{c.title}</h3>
-                    <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5">{c.issuer}</p>
-                    <p className="mt-2 text-sm text-muted-foreground">{c.note}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section id="testimonials" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
-        <SectionHead index="08" label="Testimonials" title="What people say." tone="text-accent" />
-        <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <Reveal key={t.name + t.company} delay={i * 90}>
-              <figure className="h-full rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 shadow-lg shadow-black/20 hover:-translate-y-1 hover:border-accent/60 transition-all duration-300">
-                <Quote className="h-6 w-6 text-primary/60" />
-                <blockquote className="mt-4 text-sm leading-relaxed text-muted-foreground">"{t.review}"</blockquote>
-                <div className="mt-5 flex gap-1">
-                  {Array.from({ length: t.rating }).map((_, s) => (
-                    <Star key={s} className="h-3.5 w-3.5 fill-current gold-text" />
-                  ))}
-                </div>
-                <figcaption className="mt-4 border-t border-border pt-4">
-                  <p className="font-display text-base">{t.name}</p>
-                  <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">{t.company}</p>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
-      </section>
 
       {/* CONTACT */}
       <ContactSection />
@@ -659,90 +561,19 @@ function Portfolio() {
 /* -------------------------------- contact -------------------------------- */
 
 function ContactSection() {
-  const [sent, setSent] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    const name = String(fd.get("name") ?? "").trim();
-    const email = String(fd.get("email") ?? "").trim();
-    const message = String(fd.get("message") ?? "").trim();
-    const next: Record<string, string> = {};
-    if (!name || name.length > 100) next.name = "Enter your name (max 100 chars).";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255) next.email = "Enter a valid email address.";
-    if (!message || message.length > 1000) next.message = "Enter a message (max 1000 chars).";
-    setErrors(next);
-    if (Object.keys(next).length) return;
-
-    window.location.href = `mailto:hima.thanki@example.com?subject=${encodeURIComponent(
-      `Portfolio enquiry from ${name}`,
-    )}&body=${encodeURIComponent(`${message}\n\n— ${name} (${email})`)}`;
-    setSent(true);
-  }
-
-  const details = [
-    { icon: Mail, label: "Email", value: "hima.thanki@example.com", href: "mailto:hima.thanki@example.com" },
-    { icon: Phone, label: "Phone", value: "+91 00000 00000", href: "tel:+910000000000" },
-    { icon: MapPin, label: "Location", value: "Gujarat, India", href: "" },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/himathanki", href: "https://www.linkedin.com/" },
-    { icon: Github, label: "GitHub", value: "github.com/himathanki", href: "https://github.com/" },
-  ];
-
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
-      <SectionHead index="09" label="Contact" title="Let's Connect." sub="Open to full-time roles, freelance projects and collaborations." />
-      <div className="grid gap-8 lg:grid-cols-2">
-        <div className="space-y-3">
-          {details.map((d) => {
-            const Inner = (
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-primary/60 transition-colors">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/10 text-primary">
-                  <d.icon className="h-4 w-4" />
-                </span>
-                <div>
-                  <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">{d.label}</p>
-                  <p className="text-sm">{d.value}</p>
-                </div>
-              </div>
-            );
-            return d.href ? (
-              <a key={d.label} href={d.href} target={d.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="block">{Inner}</a>
-            ) : (
-              <div key={d.label}>{Inner}</div>
-            );
-          })}
+      <SectionHead index="06" label="Contact" title="Let's Connect." sub="Open to full-time roles, freelance projects and collaborations." />
+      <div className="max-w-md">
+        <div className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-primary/60 transition-colors">
+          <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/10 text-primary">
+            <MapPin className="h-4 w-4" />
+          </span>
+          <div>
+            <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Location</p>
+            <p className="text-sm">Dubai, UAE</p>
+          </div>
         </div>
-
-        <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 space-y-4">
-          <div>
-            <label htmlFor="name" className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Name</label>
-            <input id="name" name="name" maxLength={100}
-              className="mt-2 w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-sm outline-none focus:border-primary transition-colors" />
-            {errors.name && <p className="mt-1 text-xs text-accent">{errors.name}</p>}
-          </div>
-          <div>
-            <label htmlFor="email" className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Email</label>
-            <input id="email" name="email" type="email" maxLength={255}
-              className="mt-2 w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-sm outline-none focus:border-primary transition-colors" />
-            {errors.email && <p className="mt-1 text-xs text-accent">{errors.email}</p>}
-          </div>
-          <div>
-            <label htmlFor="message" className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Message</label>
-            <textarea id="message" name="message" rows={5} maxLength={1000}
-              className="mt-2 w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-sm outline-none focus:border-primary transition-colors resize-none" />
-            {errors.message && <p className="mt-1 text-xs text-accent">{errors.message}</p>}
-          </div>
-          <div className="flex flex-wrap gap-3 pt-2">
-            <button type="submit" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity glow-blue">
-              Send Message <ArrowRight className="h-4 w-4" />
-            </button>
-            <a href={RESUME_URL} download className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium hover:border-accent transition-colors">
-              <Download className="h-4 w-4" /> Download Resume
-            </a>
-          </div>
-          {sent && <p className="text-xs text-accent">Thanks — your mail client should now be open.</p>}
-        </form>
       </div>
     </section>
   );
@@ -792,20 +623,6 @@ function AnimatedWorkspace() {
           </div>
         </div>
 
-        <div className="absolute top-1/2 right-96 w-[220px] rounded-xl border border-border bg-card/80 backdrop-blur-md shadow-2xl anim-drift">
-          <div className="border-b border-border px-3 py-2 flex items-center gap-2">
-            <span className="mono text-[10px] gold-text">Amazon · Sales</span>
-          </div>
-          <div className="p-3">
-            <div className="mono text-lg font-semibold gold-text">+42.8%</div>
-            <div className="mt-2 flex items-end gap-1 h-12">
-              {[0.5, 0.7, 0.4, 0.9, 0.6, 1, 0.8].map((h, i) => (
-                <div key={i} className="flex-1 rounded-t bg-gradient-to-t from-primary to-accent anim-bar"
-                  style={{ height: `${h * 100}%`, animationDelay: `${i * 0.15}s` }} />
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
