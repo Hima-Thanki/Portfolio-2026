@@ -792,20 +792,6 @@ function AnimatedWorkspace() {
           </div>
         </div>
 
-        <div className="absolute top-1/2 right-96 w-[220px] rounded-xl border border-border bg-card/80 backdrop-blur-md shadow-2xl anim-drift">
-          <div className="border-b border-border px-3 py-2 flex items-center gap-2">
-            <span className="mono text-[10px] gold-text">Amazon · Sales</span>
-          </div>
-          <div className="p-3">
-            <div className="mono text-lg font-semibold gold-text">+42.8%</div>
-            <div className="mt-2 flex items-end gap-1 h-12">
-              {[0.5, 0.7, 0.4, 0.9, 0.6, 1, 0.8].map((h, i) => (
-                <div key={i} className="flex-1 rounded-t bg-gradient-to-t from-primary to-accent anim-bar"
-                  style={{ height: `${h * 100}%`, animationDelay: `${i * 0.15}s` }} />
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
