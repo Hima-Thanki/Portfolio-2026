@@ -338,7 +338,19 @@ function Portfolio() {
           <div>
             <p className="mono text-xs uppercase tracking-[0.3em] text-primary mb-4">01 · About</p>
             <h2 className="font-display text-4xl md:text-5xl">About me.</h2>
+            <Reveal delay={120}>
+              <img
+                src={aboutIllustration}
+                alt="Illustration of web development, UI/UX design and creative tools"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                decoding="async"
+                className="mt-8 w-full max-w-[280px] anim-float-alt"
+              />
+            </Reveal>
           </div>
+
           <Reveal className="space-y-5 text-muted-foreground text-lg leading-relaxed">
             <div className="space-y-5">
               <p>
