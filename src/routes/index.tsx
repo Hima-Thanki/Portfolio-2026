@@ -418,10 +418,21 @@ function Portfolio() {
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={(i % 2) * 100}>
               <article className="group h-full flex flex-col overflow-hidden rounded-2xl border border-border bg-card/70 backdrop-blur-sm shadow-lg shadow-black/20 hover:-translate-y-1 hover:border-primary/60 hover:shadow-primary/10 transition-all duration-300">
-                <div className="aspect-[16/10] overflow-hidden bg-secondary">
-                  <img src={p.img} alt={p.title} loading="lazy" width={1200} height={750}
-                    className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                <div className="p-4 pb-0">
+                  <div className="rounded-xl border border-border/80 bg-background/70 shadow-lg shadow-black/30 overflow-hidden">
+                    <div className="flex items-center gap-1.5 border-b border-border/70 bg-secondary/60 px-3 py-2">
+                      <span className="h-2 w-2 rounded-full bg-destructive/70" />
+                      <span className="h-2 w-2 rounded-full bg-brand-gold/70" style={{ background: "var(--brand-gold)" }} />
+                      <span className="h-2 w-2 rounded-full" style={{ background: "var(--brand-green)" }} />
+                      <span className="ml-3 h-3 flex-1 rounded-full bg-background/70" />
+                    </div>
+                    <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                      <img src={p.img} alt={`${p.title} website mockup`} loading="lazy" width={1200} height={750}
+                        className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
+                    </div>
+                  </div>
                 </div>
+
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-xl md:text-2xl">{p.title}</h3>
                   <p className="mt-1 mono text-[11px] uppercase tracking-widest text-accent">Role · {p.role}</p>
