@@ -6,6 +6,8 @@ import {
   Code2, Palette, Wrench, ShoppingCart, Layers, Star, Quote, Award, Briefcase, GraduationCap,
 } from "lucide-react";
 import certificate from "@/assets/certificate.jpg";
+import heroIllustration from "@/assets/hero-illustration.png";
+import aboutIllustration from "@/assets/about-illustration.png";
 import web1 from "@/assets/web1.png.asset.json";
 import web2 from "@/assets/web2.png.asset.json";
 import web3 from "@/assets/web3.png.asset.json";
@@ -276,7 +278,8 @@ function Portfolio() {
       {/* HERO */}
       <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
         <AnimatedWorkspace />
-        <div className="relative mx-auto max-w-6xl px-6 pt-32 pb-20 w-full">
+        <div className="relative mx-auto max-w-6xl px-6 pt-32 pb-20 w-full grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
           <p className="mono text-xs uppercase tracking-[0.4em] text-primary mb-6 flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-accent anim-pulse-dot" />
             Available for opportunities
@@ -310,8 +313,24 @@ function Portfolio() {
               </Reveal>
             ))}
           </div>
+          </div>
+
+          <div className="relative hidden lg:block">
+            <div className="absolute inset-8 rounded-full blur-3xl opacity-40"
+              style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--brand-blue) 45%, transparent), transparent 70%)" }} />
+            <img
+              src={heroIllustration}
+              alt="3D illustration of a developer workspace with laptop, code editor and UI design screens"
+              width={1024}
+              height={1024}
+              fetchPriority="high"
+              decoding="async"
+              className="relative w-full max-w-[520px] mx-auto anim-float drop-shadow-2xl"
+            />
+          </div>
         </div>
       </section>
+
 
       {/* ABOUT */}
       <section id="about" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
@@ -319,7 +338,19 @@ function Portfolio() {
           <div>
             <p className="mono text-xs uppercase tracking-[0.3em] text-primary mb-4">01 · About</p>
             <h2 className="font-display text-4xl md:text-5xl">About me.</h2>
+            <Reveal delay={120}>
+              <img
+                src={aboutIllustration}
+                alt="Illustration of web development, UI/UX design and creative tools"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                decoding="async"
+                className="mt-8 w-full max-w-[280px] anim-float-alt"
+              />
+            </Reveal>
           </div>
+
           <Reveal className="space-y-5 text-muted-foreground text-lg leading-relaxed">
             <div className="space-y-5">
               <p>
@@ -387,10 +418,21 @@ function Portfolio() {
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={(i % 2) * 100}>
               <article className="group h-full flex flex-col overflow-hidden rounded-2xl border border-border bg-card/70 backdrop-blur-sm shadow-lg shadow-black/20 hover:-translate-y-1 hover:border-primary/60 hover:shadow-primary/10 transition-all duration-300">
-                <div className="aspect-[16/10] overflow-hidden bg-secondary">
-                  <img src={p.img} alt={p.title} loading="lazy" width={1200} height={750}
-                    className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                <div className="p-4 pb-0">
+                  <div className="rounded-xl border border-border/80 bg-background/70 shadow-lg shadow-black/30 overflow-hidden">
+                    <div className="flex items-center gap-1.5 border-b border-border/70 bg-secondary/60 px-3 py-2">
+                      <span className="h-2 w-2 rounded-full bg-destructive/70" />
+                      <span className="h-2 w-2 rounded-full bg-brand-gold/70" style={{ background: "var(--brand-gold)" }} />
+                      <span className="h-2 w-2 rounded-full" style={{ background: "var(--brand-green)" }} />
+                      <span className="ml-3 h-3 flex-1 rounded-full bg-background/70" />
+                    </div>
+                    <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                      <img src={p.img} alt={`${p.title} website mockup`} loading="lazy" width={1200} height={750}
+                        className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
+                    </div>
+                  </div>
                 </div>
+
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-xl md:text-2xl">{p.title}</h3>
                   <p className="mt-1 mono text-[11px] uppercase tracking-widest text-accent">Role · {p.role}</p>
@@ -419,16 +461,19 @@ function Portfolio() {
         </div>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {extraShots.map((s) => (
-            <figure key={s.label} className="group overflow-hidden rounded-xl border border-border bg-secondary">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src={s.img} alt={s.label} loading="lazy" width={800} height={600}
-                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-              </div>
-              <figcaption className="border-t border-border px-4 py-2 mono text-[10px] uppercase tracking-widest text-muted-foreground">{s.label}</figcaption>
-            </figure>
+          {extraShots.map((s, i) => (
+            <Reveal key={s.label} delay={(i % 4) * 80}>
+              <figure className="group overflow-hidden rounded-xl border border-border bg-secondary hover:border-primary/50 transition-colors">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={s.img} alt={s.label} loading="lazy" width={800} height={600}
+                    className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
+                </div>
+                <figcaption className="border-t border-border px-4 py-2 mono text-[10px] uppercase tracking-widest text-muted-foreground">{s.label}</figcaption>
+              </figure>
+            </Reveal>
           ))}
         </div>
+
       </section>
 
       {/* DESIGN PORTFOLIO */}
