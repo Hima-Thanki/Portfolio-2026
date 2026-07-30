@@ -552,55 +552,6 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* CERTIFICATIONS */}
-      <section id="certificate" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
-        <SectionHead index="07" label="Certificates" title="Certifications & achievements." />
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-start">
-          <Reveal className="overflow-hidden rounded-2xl border border-primary/30 shadow-2xl shadow-primary/10">
-            <img src={certificate} alt="Certificate of appreciation awarded to Hima Thanki" loading="lazy" width={1200} height={900} className="w-full" />
-          </Reveal>
-          <div className="grid gap-4">
-            {certifications.map((c, i) => (
-              <Reveal key={c.title} delay={i * 80}>
-                <div className="flex gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-accent/60 transition-colors">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-accent/40 bg-accent/10 text-accent">
-                    <Award className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <h3 className="font-display text-lg">{c.title}</h3>
-                    <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground mt-0.5">{c.issuer}</p>
-                    <p className="mt-2 text-sm text-muted-foreground">{c.note}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section id="testimonials" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
-        <SectionHead index="08" label="Testimonials" title="What people say." tone="text-accent" />
-        <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <Reveal key={t.name + t.company} delay={i * 90}>
-              <figure className="h-full rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 shadow-lg shadow-black/20 hover:-translate-y-1 hover:border-accent/60 transition-all duration-300">
-                <Quote className="h-6 w-6 text-primary/60" />
-                <blockquote className="mt-4 text-sm leading-relaxed text-muted-foreground">"{t.review}"</blockquote>
-                <div className="mt-5 flex gap-1">
-                  {Array.from({ length: t.rating }).map((_, s) => (
-                    <Star key={s} className="h-3.5 w-3.5 fill-current gold-text" />
-                  ))}
-                </div>
-                <figcaption className="mt-4 border-t border-border pt-4">
-                  <p className="font-display text-base">{t.name}</p>
-                  <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">{t.company}</p>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
-      </section>
 
       {/* CONTACT */}
       <ContactSection />
