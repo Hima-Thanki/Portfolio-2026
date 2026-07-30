@@ -263,8 +263,7 @@ function Portfolio() {
           <ul className="hidden lg:flex items-center gap-6 text-sm text-muted-foreground">
             {[
               ["About", "#about"], ["Experience", "#experience"], ["Projects", "#work"],
-              ["Design", "#graphics"], ["Amazon", "#amazon"], ["Skills", "#skills"],
-              ["Certificates", "#certificate"], ["Contact", "#contact"],
+              ["Design", "#graphics"], ["Skills", "#skills"], ["Contact", "#contact"],
             ].map(([l, h]) => (
               <li key={h}><a href={h} className="hover:text-primary transition-colors">{l}</a></li>
             ))}
