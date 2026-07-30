@@ -159,27 +159,16 @@ const extraShots = [
 const designWork = [
   { title: "Company Profile", tag: "InDesign · Print", span: "row-span-2" },
   { title: "Product Catalogue", tag: "InDesign · Print" },
-  { title: "Brochure Design", tag: "Illustrator" },
+  { title: "Safety Sign Design", tag: "CorelDRAW · Vector" },
   { title: "Flyer Design", tag: "Photoshop", span: "row-span-2" },
-  { title: "Corporate Branding", tag: "Brand System" },
+  { title: "Safety Sign Printing", tag: "Print Production" },
   { title: "Business Card", tag: "Print · Identity" },
   { title: "Logo Design", tag: "Illustrator", span: "row-span-2" },
   { title: "Packaging Design", tag: "Dieline · 3D Mockup" },
-  { title: "Amazon A+ Content", tag: "E-commerce" },
+  { title: "Industrial Safety Signage", tag: "Signage · Compliance" },
   { title: "Social Media Campaign", tag: "Canva · Photoshop" },
   { title: "Safety Signage Design", tag: "CorelDRAW · Vector" },
   { title: "Banner Design", tag: "Web & Print" },
-];
-
-const amazonSkills = [
-  { icon: FileText, title: "Product Listing Optimization", desc: "SEO-driven titles, bullets and backend keywords.", metric: "60+ listings" },
-  { icon: Search, title: "Keyword Research", desc: "Helium 10 & Jungle Scout high-intent keyword mapping.", metric: "1.5k+ keywords" },
-  { icon: Megaphone, title: "PPC Campaign Management", desc: "Sponsored Products, Brands & Display with ACoS control.", metric: "ACoS ↓ 28%" },
-  { icon: LayoutTemplate, title: "A+ Content Design", desc: "Enhanced brand content modules that lift conversion.", metric: "CVR ↑ 22%" },
-  { icon: Store, title: "Brand Store Design", desc: "Multi-page storefronts with branded navigation.", metric: "5 storefronts" },
-  { icon: Boxes, title: "Inventory Management", desc: "FBA shipments, restock planning and IPI health.", metric: "IPI 500+" },
-  { icon: LineChart, title: "Competitor Analysis", desc: "Price, review and share-of-voice benchmarking.", metric: "Weekly reports" },
-  { icon: TrendingUp, title: "SEO Optimization", desc: "Organic rank tracking and listing iteration.", metric: "Rank ↑ page 1" },
 ];
 
 const skillGroups = [
@@ -188,19 +177,6 @@ const skillGroups = [
   { icon: Palette, title: "Design", color: "gold-text", items: ["Photoshop", "Illustrator", "CorelDRAW", "Figma"] },
   { icon: ShoppingCart, title: "Amazon", color: "text-accent", items: ["Seller Central", "Helium 10", "PPC", "SEO"] },
   { icon: Wrench, title: "Tools", color: "text-primary", items: ["Git", "GitHub", "VS Code", "ChatGPT", "Gemini"] },
-];
-
-const certifications = [
-  { title: "Certificate of Appreciation", issuer: "Splendour Signs LLC", note: "Recognised for consistent quality and on-time delivery.", img: certificate },
-  { title: "Amazon Seller Central Specialist", issuer: "Marketplace Training", note: "Listing, A+ content, PPC and account health management." },
-  { title: "Web Development Certification", issuer: "Professional Course", note: "HTML5, CSS3, JavaScript, React and responsive design." },
-  { title: "Graphic Design Certification", issuer: "Adobe Toolchain", note: "Photoshop, Illustrator and print production workflow." },
-];
-
-const testimonials = [
-  { name: "Operations Manager", company: "Splendour Signs LLC", rating: 5, review: "Hima handled our website, print collateral and Amazon listings with equal confidence. Sales visibility improved noticeably within a few months." },
-  { name: "Brand Owner", company: "E-commerce Client", rating: 5, review: "The A+ content and storefront redesign made our brand look far more premium. Conversion rate went up and ad spend went down." },
-  { name: "Project Lead", company: "Jinou Trading LLC", rating: 5, review: "Reliable, detail-oriented and quick to pick up new tools. UI improvements were delivered ahead of schedule." },
 ];
 
 const RESUME_URL = "/hima-thanki-resume.pdf";
