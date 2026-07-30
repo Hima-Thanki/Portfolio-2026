@@ -6,6 +6,8 @@ import {
   Code2, Palette, Wrench, ShoppingCart, Layers, Star, Quote, Award, Briefcase, GraduationCap,
 } from "lucide-react";
 import certificate from "@/assets/certificate.jpg";
+import heroIllustration from "@/assets/hero-illustration.png";
+import aboutIllustration from "@/assets/about-illustration.png";
 import web1 from "@/assets/web1.png.asset.json";
 import web2 from "@/assets/web2.png.asset.json";
 import web3 from "@/assets/web3.png.asset.json";
