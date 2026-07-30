@@ -503,28 +503,6 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* AMAZON */}
-      <section id="amazon" className="relative overflow-hidden py-24 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-card/40 to-transparent" />
-        <div className="relative mx-auto max-w-6xl px-6">
-          <SectionHead index="05" label="Amazon Experience" title="Marketplace expertise." tone="gold-text"
-            sub="Hands-on across the Amazon Seller Central ecosystem — from listing to launch to scale." />
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {amazonSkills.map((s, i) => (
-              <Reveal key={s.title} delay={(i % 4) * 80}>
-                <div className="h-full rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 shadow-lg shadow-black/20 hover:-translate-y-1 hover:border-primary/60 hover:shadow-primary/10 transition-all duration-300">
-                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/10 text-primary">
-                    <s.icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="font-display text-lg mb-2">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground">{s.desc}</p>
-                  <p className="mt-4 mono text-[11px] uppercase tracking-widest gold-text">{s.metric}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* SKILLS */}
       <section id="skills" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
