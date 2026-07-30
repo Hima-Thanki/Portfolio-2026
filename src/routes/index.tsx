@@ -276,7 +276,8 @@ function Portfolio() {
       {/* HERO */}
       <section id="top" className="relative flex min-h-screen items-center overflow-hidden">
         <AnimatedWorkspace />
-        <div className="relative mx-auto max-w-6xl px-6 pt-32 pb-20 w-full">
+        <div className="relative mx-auto max-w-6xl px-6 pt-32 pb-20 w-full grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div>
           <p className="mono text-xs uppercase tracking-[0.4em] text-primary mb-6 flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-accent anim-pulse-dot" />
             Available for opportunities
