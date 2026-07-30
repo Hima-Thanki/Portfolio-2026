@@ -311,8 +311,24 @@ function Portfolio() {
               </Reveal>
             ))}
           </div>
+          </div>
+
+          <div className="relative hidden lg:block">
+            <div className="absolute inset-8 rounded-full blur-3xl opacity-40"
+              style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--brand-blue) 45%, transparent), transparent 70%)" }} />
+            <img
+              src={heroIllustration}
+              alt="3D illustration of a developer workspace with laptop, code editor and UI design screens"
+              width={1024}
+              height={1024}
+              fetchPriority="high"
+              decoding="async"
+              className="relative w-full max-w-[520px] mx-auto anim-float drop-shadow-2xl"
+            />
+          </div>
         </div>
       </section>
+
 
       {/* ABOUT */}
       <section id="about" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
