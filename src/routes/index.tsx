@@ -659,90 +659,19 @@ function Portfolio() {
 /* -------------------------------- contact -------------------------------- */
 
 function ContactSection() {
-  const [sent, setSent] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    const name = String(fd.get("name") ?? "").trim();
-    const email = String(fd.get("email") ?? "").trim();
-    const message = String(fd.get("message") ?? "").trim();
-    const next: Record<string, string> = {};
-    if (!name || name.length > 100) next.name = "Enter your name (max 100 chars).";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255) next.email = "Enter a valid email address.";
-    if (!message || message.length > 1000) next.message = "Enter a message (max 1000 chars).";
-    setErrors(next);
-    if (Object.keys(next).length) return;
-
-    window.location.href = `mailto:hima.thanki@example.com?subject=${encodeURIComponent(
-      `Portfolio enquiry from ${name}`,
-    )}&body=${encodeURIComponent(`${message}\n\n— ${name} (${email})`)}`;
-    setSent(true);
-  }
-
-  const details = [
-    { icon: Mail, label: "Email", value: "hima.thanki@example.com", href: "mailto:hima.thanki@example.com" },
-    { icon: Phone, label: "Phone", value: "+91 00000 00000", href: "tel:+910000000000" },
-    { icon: MapPin, label: "Location", value: "Gujarat, India", href: "" },
-    { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/himathanki", href: "https://www.linkedin.com/" },
-    { icon: Github, label: "GitHub", value: "github.com/himathanki", href: "https://github.com/" },
-  ];
-
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
-      <SectionHead index="09" label="Contact" title="Let's Connect." sub="Open to full-time roles, freelance projects and collaborations." />
-      <div className="grid gap-8 lg:grid-cols-2">
-        <div className="space-y-3">
-          {details.map((d) => {
-            const Inner = (
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-primary/60 transition-colors">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/10 text-primary">
-                  <d.icon className="h-4 w-4" />
-                </span>
-                <div>
-                  <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">{d.label}</p>
-                  <p className="text-sm">{d.value}</p>
-                </div>
-              </div>
-            );
-            return d.href ? (
-              <a key={d.label} href={d.href} target={d.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="block">{Inner}</a>
-            ) : (
-              <div key={d.label}>{Inner}</div>
-            );
-          })}
+      <SectionHead index="06" label="Contact" title="Let's Connect." sub="Open to full-time roles, freelance projects and collaborations." />
+      <div className="max-w-md">
+        <div className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-primary/60 transition-colors">
+          <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/10 text-primary">
+            <MapPin className="h-4 w-4" />
+          </span>
+          <div>
+            <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Location</p>
+            <p className="text-sm">Dubai, UAE</p>
+          </div>
         </div>
-
-        <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-6 space-y-4">
-          <div>
-            <label htmlFor="name" className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Name</label>
-            <input id="name" name="name" maxLength={100}
-              className="mt-2 w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-sm outline-none focus:border-primary transition-colors" />
-            {errors.name && <p className="mt-1 text-xs text-accent">{errors.name}</p>}
-          </div>
-          <div>
-            <label htmlFor="email" className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Email</label>
-            <input id="email" name="email" type="email" maxLength={255}
-              className="mt-2 w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-sm outline-none focus:border-primary transition-colors" />
-            {errors.email && <p className="mt-1 text-xs text-accent">{errors.email}</p>}
-          </div>
-          <div>
-            <label htmlFor="message" className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Message</label>
-            <textarea id="message" name="message" rows={5} maxLength={1000}
-              className="mt-2 w-full rounded-lg border border-border bg-background/60 px-4 py-3 text-sm outline-none focus:border-primary transition-colors resize-none" />
-            {errors.message && <p className="mt-1 text-xs text-accent">{errors.message}</p>}
-          </div>
-          <div className="flex flex-wrap gap-3 pt-2">
-            <button type="submit" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity glow-blue">
-              Send Message <ArrowRight className="h-4 w-4" />
-            </button>
-            <a href={RESUME_URL} download className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium hover:border-accent transition-colors">
-              <Download className="h-4 w-4" /> Download Resume
-            </a>
-          </div>
-          {sent && <p className="text-xs text-accent">Thanks — your mail client should now be open.</p>}
-        </form>
       </div>
     </section>
   );
