@@ -1,11 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
-  Mail, Phone, MapPin, Linkedin, Github, Download, ArrowRight, ExternalLink,
-  Search, Megaphone, LayoutTemplate, Store, Boxes, LineChart, TrendingUp, FileText,
-  Code2, Palette, Wrench, ShoppingCart, Layers, Star, Quote, Award, Briefcase, GraduationCap,
+  Mail, MapPin, Linkedin, Github, Download, ArrowRight, ExternalLink,
+  Code2, Palette, Wrench, ShoppingCart, Layers, Briefcase, GraduationCap,
 } from "lucide-react";
-import certificate from "@/assets/certificate.jpg";
 import heroIllustration from "@/assets/hero-illustration.png";
 import aboutIllustration from "@/assets/about-illustration.png";
 import web1 from "@/assets/web1.png.asset.json";
@@ -481,7 +479,7 @@ function Portfolio() {
 
       {/* SKILLS */}
       <section id="skills" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
-        <SectionHead index="06" label="Skills" title="Tools & technologies." />
+        <SectionHead index="05" label="Skills" title="Tools & technologies." />
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((g, i) => (
             <Reveal key={g.title} delay={(i % 3) * 80}>
