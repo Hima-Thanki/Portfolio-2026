@@ -461,16 +461,19 @@ function Portfolio() {
         </div>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {extraShots.map((s) => (
-            <figure key={s.label} className="group overflow-hidden rounded-xl border border-border bg-secondary">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src={s.img} alt={s.label} loading="lazy" width={800} height={600}
-                  className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
-              </div>
-              <figcaption className="border-t border-border px-4 py-2 mono text-[10px] uppercase tracking-widest text-muted-foreground">{s.label}</figcaption>
-            </figure>
+          {extraShots.map((s, i) => (
+            <Reveal key={s.label} delay={(i % 4) * 80}>
+              <figure className="group overflow-hidden rounded-xl border border-border bg-secondary hover:border-primary/50 transition-colors">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={s.img} alt={s.label} loading="lazy" width={800} height={600}
+                    className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
+                </div>
+                <figcaption className="border-t border-border px-4 py-2 mono text-[10px] uppercase tracking-widest text-muted-foreground">{s.label}</figcaption>
+              </figure>
+            </Reveal>
           ))}
         </div>
+
       </section>
 
       {/* DESIGN PORTFOLIO */}
