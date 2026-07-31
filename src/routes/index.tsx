@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
-  Mail, MapPin, Linkedin, Github, Download, ArrowRight, ExternalLink,
+  Mail, Linkedin, Github, Download, ArrowRight, ExternalLink,
   Code2, Palette, Wrench, ShoppingCart, Layers, Briefcase, GraduationCap,
 } from "lucide-react";
 import heroIllustration from "@/assets/hero-illustration.png";
@@ -21,17 +21,17 @@ export const Route = createFileRoute("/")({
   component: Portfolio,
   head: () => ({
     meta: [
-      { title: "Hima Thanki | Web Developer, Graphic Designer & Amazon Specialist" },
+      { title: "Hima Thanki | Web Developer, Graphic Designer & E-Commerce Executive" },
       {
         name: "description",
         content:
-          "Professional portfolio showcasing web development, graphic design, Shopify, WordPress, branding, and Amazon marketplace expertise.",
+          "Professional portfolio showcasing web development, graphic design, Shopify, WordPress, branding, and e-commerce expertise.",
       },
-      { property: "og:title", content: "Hima Thanki | Web Developer, Graphic Designer & Amazon Marketplace Specialist" },
+      { property: "og:title", content: "Hima Thanki | Web Developer, Graphic Designer & E-Commerce Executive" },
       {
         property: "og:description",
         content:
-          "Professional portfolio showcasing web development, graphic design, Shopify, WordPress, branding, and Amazon marketplace expertise.",
+          "Professional portfolio showcasing web development, graphic design, Shopify, WordPress, branding, and e-commerce expertise.",
       },
       { property: "og:type", content: "profile" },
       { property: "og:url", content: "https://hima-thanki.lovable.app/" },
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Hima Thanki",
-          jobTitle: "Web Developer, Graphic Designer & Amazon Marketplace Specialist",
+          jobTitle: "Web Developer, Graphic Designer & E-Commerce Executive",
           url: "https://hima-thanki.lovable.app/",
         }),
       },
@@ -66,107 +66,94 @@ const experience = [
   {
     icon: Briefcase,
     company: "Splendour Signs LLC",
-    role: "Web Developer • Graphic Designer • Amazon Executive",
+    role: "Web Developer • Graphic Designer • E-Commerce Executive",
     period: "Full-time",
     points: [
-      "Developed and maintained company websites",
-      "Designed marketing materials and brand collateral",
-      "Managed Amazon product listings across categories",
-      "Created Amazon A+ Content and brand storefronts",
-      "Optimized product SEO for organic ranking",
-      "Planned and managed PPC campaigns",
+      "Design industrial safety signage using CorelDRAW.",
+      "Develop and maintain Shopify & WordPress websites.",
+      "Design product images, flyers, posters, and catalogs.",
+      "Manage Amazon product listings.",
+      "Use ChatGPT & Gemini to improve workflows.",
     ],
   },
   {
     icon: GraduationCap,
     company: "Jinou Trading LLC",
-    role: "Web Developer Intern",
+    role: "Graphic Design & Web Intern",
     period: "Internship",
     points: [
-      "Website maintenance and content updates",
-      "Frontend development with HTML, CSS & JavaScript",
-      "UI improvements and responsive fixes",
+      "Designed logos and branding materials.",
+      "Created badge and uniform designs.",
+      "Worked with clients on brand identity.",
+      "Delivered production-ready artwork.",
+    ],
+  },
+  {
+    icon: Code2,
+    company: "Freelance",
+    role: "Web Developer & Graphic Designer",
+    period: "Jamnagar, Gujarat",
+    points: [
+      "Built websites using HTML, CSS, JavaScript & PHP.",
+      "Designed marketing creatives and branding.",
+      "Worked directly with clients.",
+      "Delivered custom web & design solutions.",
     ],
   },
 ];
 
 const projects = [
   {
-    title: "Splendour Signs LLC Website",
-    role: "Web Developer & Designer",
-    desc: "Corporate website for an industrial signage manufacturer — services, catalogue and enquiry funnel.",
-    tech: ["WordPress", "Elementor", "PHP", "SEO"],
-    img: web9.url,
-    demo: "#",
-    github: "",
-  },
-  {
     title: "SIGNGARDS Shopify Store",
     role: "Shopify Developer",
     desc: "Safety signage e-commerce store with custom theme, collections and conversion-focused product pages.",
     tech: ["Shopify", "Liquid", "CSS", "CRO"],
-    img: web8.url,
+    pages: [web8.url, web9.url, web10.url],
     demo: "#",
     github: "",
   },
   {
-    title: "Amazon Product Listing Management",
-    role: "Amazon Marketplace Executive",
-    desc: "End-to-end listing creation, A+ content, keyword research and PPC for 60+ SKUs on Seller Central.",
-    tech: ["Seller Central", "Helium 10", "A+ Content", "PPC"],
-    img: web10.url,
-    demo: "",
-    github: "",
-  },
-  {
-    title: "Corporate Website — TazZA",
+    title: "Corporate Website – TazZA",
     role: "Frontend Developer",
     desc: "Multi-page organic grocery brand site with hero, services, gallery and testimonial modules.",
     tech: ["WordPress", "Elementor", "HTML5", "CSS3"],
-    img: web1.url,
+    pages: [web1.url, web2.url],
     demo: "#",
     github: "",
   },
   {
-    title: "Branding & Identity — IconStock",
-    role: "UI/UX & Brand Designer",
-    desc: "Icon marketplace brand system: logo, colour system, UI kit and marketing site built in React.",
-    tech: ["React", "Tailwind CSS", "Figma", "Illustrator"],
-    img: web3.url,
+    title: "E-Commerce Website – Special Offers",
+    role: "Frontend Developer",
+    desc: "Grocery deals storefront with category browsing, promo tiles and responsive product grids.",
+    tech: ["HTML5", "CSS3", "JavaScript", "MySQL"],
+    pages: [web5.url, web6.url, web7.url],
     demo: "#",
     github: "#",
   },
   {
-    title: "E-Commerce Website — Special Offers",
-    role: "Frontend Developer",
-    desc: "Grocery deals storefront with category browsing, promo tiles and responsive product grids.",
-    tech: ["HTML5", "CSS3", "JavaScript", "MySQL"],
-    img: web5.url,
+    title: "Branding & Identity – IconStock Website",
+    role: "UI/UX & Brand Designer",
+    desc: "Icon marketplace brand system: logo, colour system, UI kit and marketing site built in React.",
+    tech: ["React", "Tailwind CSS", "Figma", "Illustrator"],
+    pages: [web3.url, web4.url],
     demo: "#",
     github: "#",
   },
-];
-
-const extraShots = [
-  { label: "TazZA — Gallery", img: web2.url },
-  { label: "IconStock — Features", img: web4.url },
-  { label: "Special Offers — Categories", img: web6.url },
-  { label: "Special Offers — Deals", img: web7.url },
+  {
+    title: "Splendour Signs LLC Website",
+    role: "Web Developer & Designer",
+    desc: "Managed and maintained the existing WordPress website with content updates and improvements.",
+    tech: ["WordPress", "Elementor", "PHP", "SEO"],
+    pages: [],
+    demo: "#",
+    github: "",
+  },
 ];
 
 const designWork = [
-  { title: "Company Profile", tag: "InDesign · Print", span: "row-span-2" },
-  { title: "Product Catalogue", tag: "InDesign · Print" },
-  { title: "Safety Sign Design", tag: "CorelDRAW · Vector" },
-  { title: "Flyer Design", tag: "Photoshop", span: "row-span-2" },
-  { title: "Safety Sign Printing", tag: "Print Production" },
-  { title: "Business Card", tag: "Print · Identity" },
-  { title: "Logo Design", tag: "Illustrator", span: "row-span-2" },
-  { title: "Packaging Design", tag: "Dieline · 3D Mockup" },
-  { title: "Industrial Safety Signage", tag: "Signage · Compliance" },
-  { title: "Social Media Campaign", tag: "Canva · Photoshop" },
-  { title: "Safety Signage Design", tag: "CorelDRAW · Vector" },
-  { title: "Banner Design", tag: "Web & Print" },
+  { title: "Safety Signage", tag: "CorelDRAW · Industrial Signs", span: "md:col-span-1" },
+  { title: "Marketing Materials", tag: "Photoshop · Illustrator", span: "md:col-span-1" },
+  { title: "Packaging Designs", tag: "Print · Dieline", span: "md:col-span-1" },
 ];
 
 const skillGroups = [
@@ -258,7 +245,7 @@ function Portfolio() {
             Available for opportunities
           </p>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl leading-[1.05] max-w-5xl font-semibold">
-            Web Developer, <span className="grad-text">Graphic Designer</span> & Amazon Marketplace <span className="grad-text">Specialist</span>
+            Web Developer, <span className="grad-text">Graphic Designer</span> & E-Commerce <span className="grad-text">Executive</span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             I build modern websites, create professional branding, and optimize Amazon stores to help businesses grow
@@ -267,12 +254,6 @@ function Portfolio() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a href="#work" className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity glow-blue">
               View Projects <ArrowRight className="h-4 w-4" />
-            </a>
-            <a href={RESUME_URL} download className="inline-flex items-center gap-2 rounded-lg border border-accent/60 bg-accent/10 px-6 py-3 text-sm font-medium text-accent hover:bg-accent/20 transition-colors">
-              <Download className="h-4 w-4" /> Download Resume
-            </a>
-            <a href="#contact" className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-medium hover:border-primary transition-colors">
-              <Mail className="h-4 w-4" /> Contact Me
             </a>
           </div>
 
@@ -392,18 +373,47 @@ function Portfolio() {
             <Reveal key={p.title} delay={(i % 2) * 100}>
               <article className="group h-full flex flex-col overflow-hidden rounded-2xl border border-border bg-card/70 backdrop-blur-sm shadow-lg shadow-black/20 hover:-translate-y-1 hover:border-primary/60 hover:shadow-primary/10 transition-all duration-300">
                 <div className="p-4 pb-0">
-                  <div className="rounded-xl border border-border/80 bg-background/70 shadow-lg shadow-black/30 overflow-hidden">
-                    <div className="flex items-center gap-1.5 border-b border-border/70 bg-secondary/60 px-3 py-2">
-                      <span className="h-2 w-2 rounded-full bg-destructive/70" />
-                      <span className="h-2 w-2 rounded-full bg-brand-gold/70" style={{ background: "var(--brand-gold)" }} />
-                      <span className="h-2 w-2 rounded-full" style={{ background: "var(--brand-green)" }} />
-                      <span className="ml-3 h-3 flex-1 rounded-full bg-background/70" />
+                  {p.pages.length > 0 ? (
+                    <>
+                      <div className="rounded-xl border border-border/80 bg-background/70 shadow-lg shadow-black/30 overflow-hidden">
+                        <div className="flex items-center gap-1.5 border-b border-border/70 bg-secondary/60 px-3 py-2">
+                          <span className="h-2 w-2 rounded-full bg-destructive/70" />
+                          <span className="h-2 w-2 rounded-full bg-brand-gold/70" style={{ background: "var(--brand-gold)" }} />
+                          <span className="h-2 w-2 rounded-full" style={{ background: "var(--brand-green)" }} />
+                          <span className="ml-3 h-3 flex-1 rounded-full bg-background/70" />
+                        </div>
+                        <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                          <img src={p.pages[0]} alt={`${p.title} website mockup`} loading="lazy" width={1200} height={750}
+                            className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
+                        </div>
+                      </div>
+                      {p.pages.length > 1 && (
+                        <div className="mt-3 grid grid-cols-3 gap-2">
+                          {p.pages.slice(1).map((img, idx) => (
+                            <div key={idx} className="aspect-[4/3] overflow-hidden rounded-lg border border-border/80 bg-secondary">
+                              <img src={img} alt={`${p.title} page ${idx + 2}`} loading="lazy" width={400} height={300}
+                                className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <div className="rounded-xl border border-border/80 bg-background/70 shadow-lg shadow-black/30 overflow-hidden">
+                      <div className="flex items-center gap-1.5 border-b border-border/70 bg-secondary/60 px-3 py-2">
+                        <span className="h-2 w-2 rounded-full bg-destructive/70" />
+                        <span className="h-2 w-2 rounded-full bg-brand-gold/70" style={{ background: "var(--brand-gold)" }} />
+                        <span className="h-2 w-2 rounded-full" style={{ background: "var(--brand-green)" }} />
+                        <span className="ml-3 h-3 flex-1 rounded-full bg-background/70" />
+                      </div>
+                      <div className="aspect-[16/10] overflow-hidden bg-secondary flex items-center justify-center">
+                        <div className="text-center p-6">
+                          <ExternalLink className="h-10 w-10 mx-auto text-muted-foreground/50 mb-3" />
+                          <p className="text-sm text-muted-foreground">Website preview</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="aspect-[16/10] overflow-hidden bg-secondary">
-                      <img src={p.img} alt={`${p.title} website mockup`} loading="lazy" width={1200} height={750}
-                        className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
-                    </div>
-                  </div>
+                  )}
                 </div>
 
                 <div className="flex flex-1 flex-col p-6">
@@ -432,31 +442,16 @@ function Portfolio() {
             </Reveal>
           ))}
         </div>
-
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {extraShots.map((s, i) => (
-            <Reveal key={s.label} delay={(i % 4) * 80}>
-              <figure className="group overflow-hidden rounded-xl border border-border bg-secondary hover:border-primary/50 transition-colors">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img src={s.img} alt={s.label} loading="lazy" width={800} height={600}
-                    className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
-                </div>
-                <figcaption className="border-t border-border px-4 py-2 mono text-[10px] uppercase tracking-widest text-muted-foreground">{s.label}</figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
-
       </section>
 
       {/* DESIGN PORTFOLIO */}
       <section id="graphics" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
         <SectionHead index="04" label="Graphic Design" title="Design portfolio." tone="text-accent"
           sub="Professional brand, print and e-commerce design work across industries." />
-        <div className="grid auto-rows-[140px] grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-3">
           {designWork.map((d, i) => (
             <div key={d.title}
-              className={`group relative overflow-hidden rounded-2xl border border-border bg-card/70 p-5 flex flex-col justify-end hover:border-accent/60 hover:-translate-y-1 transition-all duration-300 ${d.span ?? ""}`}>
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card/70 p-6 min-h-[240px] flex flex-col justify-end hover:border-accent/60 hover:-translate-y-1 transition-all duration-300">
               <div className="absolute inset-0 opacity-70 transition-opacity duration-500 group-hover:opacity-100"
                 style={{
                   background:
@@ -469,7 +464,7 @@ function Portfolio() {
               <div className="absolute inset-0 grid-bg opacity-[0.18]" />
               <div className="relative">
                 <p className="mono text-[10px] uppercase tracking-widest text-accent">{d.tag}</p>
-                <h3 className="mt-1 font-display text-lg leading-tight">{d.title}</h3>
+                <h3 className="mt-2 font-display text-2xl leading-tight">{d.title}</h3>
               </div>
             </div>
           ))}
@@ -513,7 +508,7 @@ function Portfolio() {
           <div>
             <p className="font-display text-lg"><span className="grad-text">HIMA THANKI</span></p>
             <p className="mt-3 text-sm text-muted-foreground">
-              Web Developer, Graphic Designer & Amazon Marketplace Specialist.
+              Web Developer, Graphic Designer & E-Commerce Executive.
             </p>
           </div>
           <div>
@@ -564,16 +559,25 @@ function ContactSection() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
       <SectionHead index="06" label="Contact" title="Let's Connect." sub="Open to full-time roles, freelance projects and collaborations." />
-      <div className="max-w-md">
-        <div className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-primary/60 transition-colors">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-3xl">
+        <a href="mailto:hima.thanki@example.com" className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-primary/60 transition-colors">
           <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/10 text-primary">
-            <MapPin className="h-4 w-4" />
+            <Mail className="h-4 w-4" />
           </span>
           <div>
-            <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Location</p>
-            <p className="text-sm">Dubai, UAE</p>
+            <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Email</p>
+            <p className="text-sm">hima.thanki@example.com</p>
           </div>
-        </div>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-accent/60 transition-colors">
+          <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-accent/40 bg-accent/10 text-accent">
+            <Github className="h-4 w-4" />
+          </span>
+          <div>
+            <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">GitHub</p>
+            <p className="text-sm">github.com/hima-thanki</p>
+          </div>
+        </a>
       </div>
     </section>
   );
