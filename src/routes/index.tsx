@@ -108,7 +108,7 @@ const projects = [
     role: "Shopify Developer",
     desc: "Safety signage e-commerce store with custom theme, collections and conversion-focused product pages.",
     tech: ["Shopify", "Liquid", "CSS", "CRO"],
-    pages: [web8.url, web9.url, web10.url],
+    pages: [web9.url, web8.url, web10.url],
     demo: "#",
     github: "",
   },
