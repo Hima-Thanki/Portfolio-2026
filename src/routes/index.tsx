@@ -160,7 +160,7 @@ const skillGroups = [
   { icon: Code2, title: "Development", color: "text-primary", items: ["HTML5", "CSS3", "JavaScript", "React", "PHP", "MySQL"] },
   { icon: Layers, title: "CMS", color: "text-accent", items: ["WordPress", "Shopify", "Wix"] },
   { icon: Palette, title: "Design", color: "gold-text", items: ["Photoshop", "Illustrator", "CorelDRAW", "Figma"] },
-  { icon: ShoppingCart, title: "Amazon", color: "text-accent", items: ["Seller Central", "Helium 10", "PPC", "SEO"] },
+  { icon: ShoppingCart, title: "Amazon", color: "text-accent", items: ["Seller Central", "Keywords", "PPC", "SEO"] },
   { icon: Wrench, title: "Tools", color: "text-primary", items: ["Git", "GitHub", "VS Code", "ChatGPT", "Gemini"] },
 ];
 
