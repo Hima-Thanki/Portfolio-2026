@@ -139,15 +139,6 @@ const projects = [
     demo: "#",
     github: "#",
   },
-  {
-    title: "Splendour Signs LLC Website",
-    role: "Web Developer & Designer",
-    desc: "Managed and maintained the existing WordPress website with content updates and improvements.",
-    tech: ["WordPress", "Elementor", "PHP", "SEO"],
-    pages: [],
-    demo: "#",
-    github: "",
-  },
 ];
 
 const designWork = [
