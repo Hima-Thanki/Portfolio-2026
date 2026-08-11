@@ -16,6 +16,11 @@ import web7 from "@/assets/web7-new.webp.asset.json";
 import web8 from "@/assets/web8.png.asset.json";
 import web9 from "@/assets/web9.png.asset.json";
 import web10 from "@/assets/web10.png.asset.json";
+import dsFlyer from "@/assets/realestate-flyer.jpg.asset.json";
+import dsPoster from "@/assets/realestate-poster.jpg.asset.json";
+import dsMenu from "@/assets/menu-brochure.jpg.asset.json";
+import dsCake from "@/assets/cake-banner.jpg.asset.json";
+import dsWine from "@/assets/wine-banner.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
@@ -142,10 +147,16 @@ const projects = [
 ];
 
 const designWork = [
-  { title: "Safety Signage", tag: "CorelDRAW · Industrial Signs", span: "md:col-span-1" },
-  { title: "Marketing Materials", tag: "Photoshop · Illustrator", span: "md:col-span-1" },
-  { title: "Packaging Designs", tag: "Print · Dieline", span: "md:col-span-1" },
+  { title: "Real Estate Flyer Design", tag: "Print · Flyer", img: dsFlyer.url },
+  { title: "Real Estate Poster Design", tag: "Print · Poster", img: dsPoster.url },
+  { title: "Restaurant Menu Brochure", tag: "Print · Bi-fold Menu", img: dsMenu.url },
+  { title: "Bakery Website Banner", tag: "Web · Hero Banner", img: dsCake.url },
+  { title: "Wine Store Website Banner", tag: "Web · Hero Banner", img: dsWine.url },
+  { title: "Safety Signage", tag: "CorelDRAW · Industrial Signs", img: null },
+  { title: "Marketing Materials", tag: "Photoshop · Illustrator", img: null },
+  { title: "Packaging Designs", tag: "Print · Dieline", img: null },
 ];
+
 
 const skillGroups = [
   { icon: Code2, title: "Development", color: "text-primary", items: ["HTML5", "CSS3", "JavaScript", "Python", "PHP", "MySQL"] },
@@ -442,23 +453,34 @@ function Portfolio() {
         <div className="grid gap-6 md:grid-cols-3">
           {designWork.map((d, i) => (
             <div key={d.title}
-              className="group relative overflow-hidden rounded-2xl border border-border bg-card/70 p-6 min-h-[240px] flex flex-col justify-end hover:border-accent/60 hover:-translate-y-1 transition-all duration-300">
-              <div className="absolute inset-0 opacity-70 transition-opacity duration-500 group-hover:opacity-100"
-                style={{
-                  background:
-                    i % 3 === 0
-                      ? "linear-gradient(140deg, color-mix(in oklab, var(--brand-blue) 22%, transparent), transparent 70%)"
-                      : i % 3 === 1
-                        ? "linear-gradient(140deg, color-mix(in oklab, var(--brand-green) 22%, transparent), transparent 70%)"
-                        : "linear-gradient(140deg, color-mix(in oklab, var(--brand-gold) 18%, transparent), transparent 70%)",
-                }} />
-              <div className="absolute inset-0 grid-bg opacity-[0.18]" />
-              <div className="relative">
+              className="group relative overflow-hidden rounded-2xl border border-border bg-card/70 flex flex-col hover:border-accent/60 hover:-translate-y-1 transition-all duration-300">
+              {d.img ? (
+                <div className="relative overflow-hidden aspect-[4/3] bg-background/60">
+                  <img src={d.img} alt={`${d.title} — graphic design by Hima Thanki`} loading="lazy"
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                </div>
+              ) : (
+                <div className="relative min-h-[180px]">
+                  <div className="absolute inset-0 opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+                    style={{
+                      background:
+                        i % 3 === 0
+                          ? "linear-gradient(140deg, color-mix(in oklab, var(--brand-blue) 22%, transparent), transparent 70%)"
+                          : i % 3 === 1
+                            ? "linear-gradient(140deg, color-mix(in oklab, var(--brand-green) 22%, transparent), transparent 70%)"
+                            : "linear-gradient(140deg, color-mix(in oklab, var(--brand-gold) 18%, transparent), transparent 70%)",
+                    }} />
+                  <div className="absolute inset-0 grid-bg opacity-[0.18]" />
+                </div>
+              )}
+              <div className="relative p-5">
                 <p className="mono text-[10px] uppercase tracking-widest text-accent">{d.tag}</p>
-                <h3 className="mt-2 font-display text-2xl leading-tight">{d.title}</h3>
+                <h3 className="mt-2 font-display text-xl leading-tight">{d.title}</h3>
               </div>
             </div>
           ))}
+
         </div>
       </section>
 
