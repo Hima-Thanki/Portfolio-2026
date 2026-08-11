@@ -384,19 +384,19 @@ function Portfolio() {
                           <span className="h-2 w-2 rounded-full" style={{ background: "var(--brand-green)" }} />
                           <span className="ml-3 h-3 flex-1 rounded-full bg-background/70" />
                         </div>
-                        <div className="aspect-[16/10] overflow-hidden bg-secondary">
-                          <img src={p.pages[0]} alt={`${p.title} website mockup`} loading="lazy" width={1200} height={750}
-                            className="h-full w-full object-contain object-center transition-opacity duration-500 group-hover:opacity-90" />
+                        <div className="bg-secondary">
+                          <img src={p.pages[0]} alt={`${p.title} website mockup`} loading="lazy"
+                            className="block h-auto w-full transition-opacity duration-500 group-hover:opacity-90" />
                         </div>
                       </div>
                       {p.pages.length > 1 && (
                         <div className="grid grid-cols-3 gap-2 p-2">
                           {p.pages.slice(1).map((img, idx) => (
-                            <div key={idx} className="aspect-[4/3] overflow-hidden rounded-lg border border-border/80 bg-secondary">
-                              <img src={img} alt={`${p.title} page ${idx + 2}`} loading="lazy" width={400} height={300}
-                                className="h-full w-full object-contain object-center transition-opacity duration-500 group-hover:opacity-90" />
-
+                            <div key={idx} className="rounded-lg border border-border/80 bg-secondary overflow-hidden">
+                              <img src={img} alt={`${p.title} page ${idx + 2}`} loading="lazy"
+                                className="block h-auto w-full transition-opacity duration-500 group-hover:opacity-90" />
                             </div>
+
                           ))}
                         </div>
                       )}
@@ -451,14 +451,14 @@ function Portfolio() {
       <section id="graphics" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
         <SectionHead index="04" label="Graphic Design" title="Design portfolio." tone="text-accent"
           sub="Professional brand, print and e-commerce design work across industries." />
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid items-start gap-6 md:grid-cols-3">
           {designWork.map((d, i) => (
             <div key={d.title}
               className="group relative overflow-hidden rounded-2xl border border-border bg-card/70 flex flex-col hover:border-accent/60 hover:-translate-y-1 transition-all duration-300">
               {d.img ? (
-                <div className="relative aspect-[3/4] bg-background/60 p-3">
+                <div className="bg-background/60">
                   <img src={d.img} alt={`${d.title} — graphic design by Hima Thanki`} loading="lazy"
-                    className="h-full w-full object-contain object-center transition-opacity duration-500 group-hover:opacity-90" />
+                    className="block h-auto w-full transition-opacity duration-500 group-hover:opacity-90" />
                 </div>
               ) : (
                 <div className="relative min-h-[180px]">
