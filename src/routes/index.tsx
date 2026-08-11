@@ -384,19 +384,19 @@ function Portfolio() {
                           <span className="h-2 w-2 rounded-full" style={{ background: "var(--brand-green)" }} />
                           <span className="ml-3 h-3 flex-1 rounded-full bg-background/70" />
                         </div>
-                        <div className="aspect-[16/10] overflow-hidden bg-secondary">
-                          <img src={p.pages[0]} alt={`${p.title} website mockup`} loading="lazy" width={1200} height={750}
-                            className="h-full w-full object-contain object-center transition-opacity duration-500 group-hover:opacity-90" />
+                        <div className="bg-secondary">
+                          <img src={p.pages[0]} alt={`${p.title} website mockup`} loading="lazy"
+                            className="block h-auto w-full transition-opacity duration-500 group-hover:opacity-90" />
                         </div>
                       </div>
                       {p.pages.length > 1 && (
                         <div className="grid grid-cols-3 gap-2 p-2">
                           {p.pages.slice(1).map((img, idx) => (
-                            <div key={idx} className="aspect-[4/3] overflow-hidden rounded-lg border border-border/80 bg-secondary">
-                              <img src={img} alt={`${p.title} page ${idx + 2}`} loading="lazy" width={400} height={300}
-                                className="h-full w-full object-contain object-center transition-opacity duration-500 group-hover:opacity-90" />
-
+                            <div key={idx} className="rounded-lg border border-border/80 bg-secondary overflow-hidden">
+                              <img src={img} alt={`${p.title} page ${idx + 2}`} loading="lazy"
+                                className="block h-auto w-full transition-opacity duration-500 group-hover:opacity-90" />
                             </div>
+
                           ))}
                         </div>
                       )}
