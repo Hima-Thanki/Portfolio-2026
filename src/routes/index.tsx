@@ -386,15 +386,16 @@ function Portfolio() {
                         </div>
                         <div className="aspect-[16/10] overflow-hidden bg-secondary">
                           <img src={p.pages[0]} alt={`${p.title} website mockup`} loading="lazy" width={1200} height={750}
-                            className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
+                            className="h-full w-full object-contain object-center transition-opacity duration-500 group-hover:opacity-90" />
                         </div>
-                      </div>
+                      )}
                       {p.pages.length > 1 && (
-                        <div className="mt-3 grid grid-cols-3 gap-2">
+                        <div className="grid grid-cols-3 gap-2 p-2">
                           {p.pages.slice(1).map((img, idx) => (
                             <div key={idx} className="aspect-[4/3] overflow-hidden rounded-lg border border-border/80 bg-secondary">
                               <img src={img} alt={`${p.title} page ${idx + 2}`} loading="lazy" width={400} height={300}
-                                className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.06]" />
+                                className="h-full w-full object-contain object-center transition-opacity duration-500 group-hover:opacity-90" />
+
                             </div>
                           ))}
                         </div>
