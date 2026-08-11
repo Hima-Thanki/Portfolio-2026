@@ -148,11 +148,11 @@ const designWork = [
 ];
 
 const skillGroups = [
-  { icon: Code2, title: "Development", color: "text-primary", items: ["HTML5", "CSS3", "JavaScript", "React", "PHP", "MySQL"] },
+  { icon: Code2, title: "Development", color: "text-primary", items: ["HTML5", "CSS3", "JavaScript", "Python", "PHP", "MySQL"] },
   { icon: Layers, title: "CMS", color: "text-accent", items: ["WordPress", "Shopify", "Wix"] },
-  { icon: Palette, title: "Design", color: "gold-text", items: ["Photoshop", "Illustrator", "CorelDRAW", "Figma"] },
+  { icon: Palette, title: "Design", color: "gold-text", items: ["Photoshop", "Illustrator", "CorelDRAW", "Canva"] },
   { icon: ShoppingCart, title: "Amazon", color: "text-accent", items: ["Seller Central", "Keywords", "PPC", "SEO"] },
-  { icon: Wrench, title: "Tools", color: "text-primary", items: ["Git", "GitHub", "VS Code", "ChatGPT", "Gemini"] },
+  { icon: Wrench, title: "Tools", color: "text-primary", items: ["Git & GitHub\u00a0", "Gemini", "VS Code", "ChatGPT", ""] },
 ];
 
 const RESUME_URL = "/hima-thanki-resume.pdf";
