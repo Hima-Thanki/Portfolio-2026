@@ -388,7 +388,7 @@ function Portfolio() {
                           <img src={p.pages[0]} alt={`${p.title} website mockup`} loading="lazy" width={1200} height={750}
                             className="h-full w-full object-contain object-center transition-opacity duration-500 group-hover:opacity-90" />
                         </div>
-                      )}
+                      </div>
                       {p.pages.length > 1 && (
                         <div className="grid grid-cols-3 gap-2 p-2">
                           {p.pages.slice(1).map((img, idx) => (
