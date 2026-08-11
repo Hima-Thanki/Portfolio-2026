@@ -142,10 +142,16 @@ const projects = [
 ];
 
 const designWork = [
-  { title: "Safety Signage", tag: "CorelDRAW · Industrial Signs", span: "md:col-span-1" },
-  { title: "Marketing Materials", tag: "Photoshop · Illustrator", span: "md:col-span-1" },
-  { title: "Packaging Designs", tag: "Print · Dieline", span: "md:col-span-1" },
+  { title: "Real Estate Flyer Design", tag: "Print · Flyer", img: dsFlyer.url },
+  { title: "Real Estate Poster Design", tag: "Print · Poster", img: dsPoster.url },
+  { title: "Restaurant Menu Brochure", tag: "Print · Bi-fold Menu", img: dsMenu.url },
+  { title: "Bakery Website Banner", tag: "Web · Hero Banner", img: dsCake.url },
+  { title: "Wine Store Website Banner", tag: "Web · Hero Banner", img: dsWine.url },
+  { title: "Safety Signage", tag: "CorelDRAW · Industrial Signs", img: null },
+  { title: "Marketing Materials", tag: "Photoshop · Illustrator", img: null },
+  { title: "Packaging Designs", tag: "Print · Dieline", img: null },
 ];
+
 
 const skillGroups = [
   { icon: Code2, title: "Development", color: "text-primary", items: ["HTML5", "CSS3", "JavaScript", "Python", "PHP", "MySQL"] },
