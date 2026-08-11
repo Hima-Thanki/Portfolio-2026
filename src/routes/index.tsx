@@ -16,6 +16,11 @@ import web7 from "@/assets/web7-new.webp.asset.json";
 import web8 from "@/assets/web8.png.asset.json";
 import web9 from "@/assets/web9.png.asset.json";
 import web10 from "@/assets/web10.png.asset.json";
+import dsFlyer from "@/assets/realestate-flyer.jpg.asset.json";
+import dsPoster from "@/assets/realestate-poster.jpg.asset.json";
+import dsMenu from "@/assets/menu-brochure.jpg.asset.json";
+import dsCake from "@/assets/cake-banner.jpg.asset.json";
+import dsWine from "@/assets/wine-banner.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
