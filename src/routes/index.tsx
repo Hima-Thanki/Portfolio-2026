@@ -389,7 +389,7 @@ function Portfolio() {
                             className="block h-auto w-full transition-opacity duration-500 group-hover:opacity-90" />
                         </div>
                       </div>
-                      {p.title === "Corporate Website – TazZA" ? (
+                      {p.title === "Corporate Website – TazZA" || p.title === "SIGNGARDS Shopify Store" ? (
                         p.pages.slice(1).map((img, idx) => (
                           <div key={idx} className="mt-3 rounded-xl border border-border/80 bg-background/70 shadow-lg shadow-black/30 overflow-hidden">
                             <div className="flex items-center gap-1.5 border-b border-border/70 bg-secondary/60 px-3 py-2">
