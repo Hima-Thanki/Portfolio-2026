@@ -15,7 +15,7 @@ import web6 from "@/assets/web6-new.webp.asset.json";
 import web7 from "@/assets/web7-new.webp.asset.json";
 import web8 from "@/assets/web8.png.asset.json";
 import web9 from "@/assets/web9.png.asset.json";
-import web10 from "@/assets/web10.png.asset.json";
+
 import dsFlyer from "@/assets/realestate-flyer.jpg.asset.json";
 import dsPoster from "@/assets/realestate-poster.jpg.asset.json";
 import dsMenu from "@/assets/menu-brochure.jpg.asset.json";
@@ -113,7 +113,7 @@ const projects = [
     role: "Shopify Developer",
     desc: "Safety signage e-commerce store with custom theme, collections and conversion-focused product pages.",
     tech: ["Shopify", "Liquid", "CSS", "CRO"],
-    pages: [web9.url, web8.url, web10.url],
+    pages: [web9.url, web8.url],
     demo: "#",
     github: "",
   },
