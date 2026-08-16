@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
-  Mail, Linkedin, Github, Download, ArrowRight, ExternalLink,
+  Mail, Linkedin, Github, ArrowRight, ExternalLink,
   Code2, Palette, Wrench, ShoppingCart, Layers, Briefcase, GraduationCap,
 } from "lucide-react";
 import heroIllustration from "@/assets/hero-illustration.png";
@@ -163,7 +163,7 @@ const skillGroups = [
   { icon: Wrench, title: "Tools", color: "text-primary", items: ["Git & GitHub\u00a0", "Gemini", "VS Code", "ChatGPT"] },
 ];
 
-const RESUME_URL = "/hima-thanki-resume.pdf";
+
 
 /* --------------------------------- helpers -------------------------------- */
 
@@ -228,9 +228,6 @@ function Portfolio() {
               <li key={h}><a href={h} className="hover:text-primary transition-colors">{l}</a></li>
             ))}
           </ul>
-          <a href={RESUME_URL} download className="hidden md:inline-flex items-center gap-2 rounded-lg border border-primary/50 px-4 py-2 text-xs font-medium text-primary hover:bg-primary/10 transition-colors">
-            <Download className="h-3.5 w-3.5" /> Resume
-          </a>
         </nav>
       </header>
 
