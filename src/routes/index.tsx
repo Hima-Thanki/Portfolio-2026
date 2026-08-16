@@ -152,9 +152,6 @@ const designWork = [
   { title: "Restaurant Menu Brochure", tag: "Print · Bi-fold Menu", img: dsMenu.url },
   { title: "Bakery Website Banner", tag: "Web · Hero Banner", img: dsCake.url },
   { title: "Wine Store Website Banner", tag: "Web · Hero Banner", img: dsWine.url },
-  { title: "Safety Signage", tag: "CorelDRAW · Industrial Signs", img: null },
-  { title: "Marketing Materials", tag: "Photoshop · Illustrator", img: null },
-  { title: "Packaging Designs", tag: "Print · Dieline", img: null },
 ];
 
 
