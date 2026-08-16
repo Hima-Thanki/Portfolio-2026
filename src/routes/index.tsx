@@ -389,7 +389,22 @@ function Portfolio() {
                             className="block h-auto w-full transition-opacity duration-500 group-hover:opacity-90" />
                         </div>
                       </div>
-                      {p.pages.length > 1 && (
+                      {p.title === "Corporate Website – TazZA" ? (
+                        p.pages.slice(1).map((img, idx) => (
+                          <div key={idx} className="mt-3 rounded-xl border border-border/80 bg-background/70 shadow-lg shadow-black/30 overflow-hidden">
+                            <div className="flex items-center gap-1.5 border-b border-border/70 bg-secondary/60 px-3 py-2">
+                              <span className="h-2 w-2 rounded-full bg-destructive/70" />
+                              <span className="h-2 w-2 rounded-full bg-brand-gold/70" style={{ background: "var(--brand-gold)" }} />
+                              <span className="h-2 w-2 rounded-full" style={{ background: "var(--brand-green)" }} />
+                              <span className="ml-3 h-3 flex-1 rounded-full bg-background/70" />
+                            </div>
+                            <div className="bg-secondary">
+                              <img src={img} alt={`${p.title} page ${idx + 2}`} loading="lazy"
+                                className="block h-auto w-full transition-opacity duration-500 group-hover:opacity-90" />
+                            </div>
+                          </div>
+                        ))
+                      ) : p.pages.length > 1 ? (
                         <div className="grid grid-cols-3 gap-2 p-2">
                           {p.pages.slice(1).map((img, idx) => (
                             <div key={idx} className="rounded-lg border border-border/80 bg-secondary overflow-hidden">
@@ -399,7 +414,7 @@ function Portfolio() {
 
                           ))}
                         </div>
-                      )}
+                      ) : null}
                     </>
                   ) : (
                     <div className="rounded-xl border border-border/80 bg-background/70 shadow-lg shadow-black/30 overflow-hidden">
