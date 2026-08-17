@@ -560,7 +560,7 @@ function Portfolio() {
                 className="flex h-9 w-9 items-center justify-center rounded-lg border border-border hover:border-accent hover:text-accent transition-colors">
                 <Github className="h-4 w-4" />
               </a>
-              <a href="mailto:hima.thanki@example.com" aria-label="Email"
+              <a href="mailto:thankihima1006@gmail.com" aria-label="Email"
                 className="flex h-9 w-9 items-center justify-center rounded-lg border border-border hover:border-primary hover:text-primary transition-colors">
                 <Mail className="h-4 w-4" />
               </a>
@@ -582,13 +582,13 @@ function ContactSection() {
     <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-28">
       <SectionHead index="06" label="Contact" title="Let's Connect." sub="Open to full-time roles, freelance projects and collaborations." />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-3xl">
-        <a href="mailto:hima.thanki@example.com" className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-primary/60 transition-colors">
+        <a href="mailto:thankihima1006@gmail.com" className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-primary/60 transition-colors">
           <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/10 text-primary">
             <Mail className="h-4 w-4" />
           </span>
           <div>
             <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">Email</p>
-            <p className="text-sm">hima.thanki@example.com</p>
+            <p className="text-sm">thankihima1006@gmail.com</p>
           </div>
         </a>
         <a href="https://github.com/Hima-Thanki" target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-accent/60 transition-colors">
