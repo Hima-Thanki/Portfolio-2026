@@ -556,7 +556,7 @@ function Portfolio() {
                 className="flex h-9 w-9 items-center justify-center rounded-lg border border-border hover:border-primary hover:text-primary transition-colors">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"
+              <a href="https://github.com/Hima-Thanki" target="_blank" rel="noreferrer" aria-label="GitHub"
                 className="flex h-9 w-9 items-center justify-center rounded-lg border border-border hover:border-accent hover:text-accent transition-colors">
                 <Github className="h-4 w-4" />
               </a>
@@ -591,13 +591,13 @@ function ContactSection() {
             <p className="text-sm">hima.thanki@example.com</p>
           </div>
         </a>
-        <a href="https://github.com/" target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-accent/60 transition-colors">
+        <a href="https://github.com/Hima-Thanki" target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 backdrop-blur-sm p-5 hover:border-accent/60 transition-colors">
           <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-accent/40 bg-accent/10 text-accent">
             <Github className="h-4 w-4" />
           </span>
           <div>
             <p className="mono text-[10px] uppercase tracking-widest text-muted-foreground">GitHub</p>
-            <p className="text-sm">github.com/hima-thanki</p>
+            <p className="text-sm">github.com/Hima-Thanki</p>
           </div>
         </a>
       </div>
